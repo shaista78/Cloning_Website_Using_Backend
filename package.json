@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" : "nodemon src/server"
+    "server": "nodemon src/server"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/shaista78/Cloning_Website_Using_Backend#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "hbs": "^4.1.2",
     "mongoose": "^6.0.8"
   }
 }

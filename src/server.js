@@ -3,6 +3,15 @@ const connect = require('./configs/db');
 const app = express();
 app.use(express.json());
 
+app.set('view engine', 'hbs');
+
+app.get("/sign", (req, res) => {
+    res.render('signup')
+});
+
+app.get("", (req, res) => {
+    res.send('welcome to home page')
+});
 
 
 
