@@ -13,6 +13,10 @@ app.get("", (req, res) => {
     res.render('home')
 });
 
+app.get("/card",(req,res) =>{
+    res.render('card');
+});
+
 
 
 
