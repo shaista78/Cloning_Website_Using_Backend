@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Top.css">
+    <title>Cart</title>
+    <style>
+  
+        #data {
+            display: grid;
+            grid-template-columns: 60%;
+           grid-gap: 1%;
+           
+        }
+  #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+             box-shadow: 0 0 40px 20px rgba(223, 86, 170, 0.2);
+             margin-left: 320px;
+             border-radius: 15px;
+             height: 190px;
+             padding: 10px;
+        }
+        #data div img{
+            width: 33%;
+            height: 60%;
+        }
+            .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
+       
+       
+#top{
+    box-shadow: 0 0 40px 20px rgba(240, 7, 170, 0.15);
+	
+    float: right;
+            
+      border-radius: 5px;
+        font-size: 20px;
+        margin-top:30px;
+        padding: 12px;
+        width: 430px;
+        height: 380px;
+        margin-right: 290px;
+        position: sticky;
+        top: 200px;
+        bottom: 100px;
+        background-color: white;
+        margin-left:120px;
+        
+}
+#top button{
+    
+    width: 420px;
+    height: 40px;
+    background-color: rgb(212, 20, 180);
+}
+ h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        #top button a {
+            text-decoration: none;
+            font-size: 20px;
+            color: wheat;
+        }
+      #mrp{
+    margin-left: 62%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+#mini{
+    /* margin-top: 100px; 
+    width: 30%;*/
+  /* border: 1px solid yellow; 
+    float:right;*/
+   margin-right: 5%;
+   color: #90A4AE;
+   
+ 
+}
+h3{
+    color: black;
+    font-size: 20px;
+}
+
+#smallBox > div {
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+   
+}
+.mrp{
+
+    margin-left: 50%;
+}
+.ship{
+    margin-right: 50%;
+}
+.dis{
+    margin-left: 50%;
+}
+#help{
+    border: 1px solid #CFD8DC;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+  color: #90A4AE;
+}
+
+    </style>
+   
+</head>
+
+<body>
+
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+               
+                <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+            </div>
+            
+        </div>
+        <h1>Cart Items</h1>
+ <!-- <div id="top">
+   
+<p  id="total"></p> 
+    <p  id="totalitem"></p>
+    <button><a href="address.html">payment</a></button>
+</div> -->
+ <div id="top">
+     <div id="mini">
+        <div id="help">Need help? 922330022</div>
+        <h3>Price Details</h3>
+        <div id="smallBox">
+            <div>
+                <div>Total MRP:</div>
+               <p id="mrp"></p>
+            </div>
+            <div>
+                <div class="ship">Shipping charges:</div>
+                <div>Free</div>
+            </div>
+            <div>
+                <div>Coupon Discount:</div>
+                <div class="dis">₹0</div>
+            </div>
+            <div>
+                
+               
+                <div ></div>
+            </div>
+           
+        </div>
+
+    </div>
+    <button><a href="address.html">Place order</a></button>
+    </div>
+    <div id="data"></div>
+
+</body>
+
+</html>
+<script>
+
+     let card_data = JSON.parse(localStorage.getItem("card"));
+    console.log("card_data:", card_data);
+
+    let data_div = document.getElementById("data");
+     var total = 0;
+    var totalitem =0;
+    card_data.forEach(function (product) {
+       
+        let div = document.createElement("div");
+
+        let p_name = document.createElement("p");
+
+        p_name.innerText = product.name;
+        p_name.style.float="left";
+        p_name.setAttribute("class","txt")
+    
+
+        let p_price = document.createElement("p");
+
+        p_price.innerText = product.price;
+
+        let image = document.createElement("img");
+
+        image.src = product.image;
+
+        p_name.append(p_price);
+        
+        div.append(image, p_name);
+
+        data_div.append(div);
+        var out = product.price;
+        var x = out.replace("₹","0")
+         total = total + Number(x);
+         console.log(total);
+         totalitem = totalitem+Number(1);
+    });
+
+
+     console.log(total);
+    var total_h1 = document.getElementById("mrp");
+
+
+    if(total_h1){
+
+    total_h1.innerHTML = "₹"+total;
+}
+
+    
+ 
+   
+</script>
