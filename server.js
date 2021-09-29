@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const connect = require('./configs/db');
 
+const product = require('./controllers/admin.controller');
+
+
 const Products = require('./models/admin');
 
 const app = express();
@@ -38,9 +41,9 @@ app.get('/signup.hbs', (req,res)=>{
     
 });
 
-app.get('/address.hbs', (req,res)=>{
-    res.render('address')
-})
+app.use('/post-product',product);
+
+
 
 app.get('/AfterLogin.hbs', (req,res)=>{
     res.render('AfterLogin')
@@ -57,6 +60,51 @@ app.get('/card.hbs',(req,res)=>{
 app.get('/admin', (req,res)=>{
     res.render('admin')
 })
+
+
+
+//sub categories 2
+app.get('/perfumes_men',(req,res)=>{
+    res.render('perfumes_men')
+})
+
+app.get('/aftershaves.hbs',(req,res)=>{
+    res.render('aftershaves')
+})
+
+app.get('/colognes.hbs',(req,res)=>{
+    res.render('colognes')
+})
+
+app.get('/deodarants_men.hbs',(req,res)=>{
+    res.render('deodarants_men')
+})
+
+//sub category 1
+
+app.get('/perfume_creamed_women.hbs',(req,res)=>{
+    res.render('perfume_creamed_women')
+})
+
+app.get('/body_mist_women.hbs',(req,res)=>{
+    res.render('body_mist_women')
+})
+
+app.get('/deodorants_roll_women.hbs',(req,res)=>{
+    res.render('deodorants_roll_women')
+})
+
+app.get('/perfumes_women.hbs',(req,res)=>{
+    res.render('perfumes_women')
+})
+
+
+
+
+
+
+
+
 
 
 app.listen(3000, async() =>{
