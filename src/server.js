@@ -1,9 +1,11 @@
 const express = require('express');
 const connect = require('./configs/db');
-const register = require('./models/signup')
+const register = require('./models/signup');
+//const login = require('../views/login');
+const users = require('./models/signup');
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 
 // const jobs = require('./src/config/models/all-model');
@@ -23,34 +25,61 @@ app.get("", (req, res) => {
 });
 
 
-app.post("/register",  async (req, res) => {
+
+app.post("/register", async (req, res) => {
     try {
-    //    console.log(req.body.mobile); 
-    //    res.send(req.body.mobile)
-    const mobile = req.body.mobile;
-    const password = req.body.password;
+        //    console.log(req.body.mobile); 
+        //    res.send(req.body.mobile)
+        const mobile = req.body.mobile;
+        const password = req.body.password;
 
-if(mobile.length  === 10 && password.length >= 8){
-        const done = new register({
-            mobile: req.body.mobile,
-            password: req.body.password
-        });
 
-         const registerd = await done.save();
-    res.status(200).render(card)
-    }else{
-        res.send("please enter valid things")
-    }
 
-    }catch (err) {
+        if (mobile.length === 10 && password.length >= 8) {
+            const done = new register({
+                mobile: req.body.mobile,
+                password: req.body.password
+            });
+
+            const registerd = await done.save();
+            res.status(200).render("login")
+        } else {
+            res.send("please enter valid things")
+        }
+
+    } catch (err) {
         res.status(500).send(err);
     }
 })
-// app.use('/register', regis);
+
+app.get("/login", (req, res) => {
+    res.render('login')
+});
+
+//login partials
+
+app.post('/login', async (req, res) => {
+    try {
+        const det = req.body.ida;
+        const cred = req.body.cred;
+        
+        const userdetails = await users.findOne({ mobile: det });
+        if (userdetails.password === cred) {
+            res.render('home')
+        } else {
+            res.send("wrong")
+        }
+        // res.send("user not found!")
+
+
+    } catch (err) {
+        res.status(400).send("user not found!");
+    }
+})
 
 
 
-app.listen(3000,async()  =>{
+app.listen(3000, async () => {
     await connect();
 
     console.log("connected to DB and running on port 3000");

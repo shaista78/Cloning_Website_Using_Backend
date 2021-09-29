@@ -1,21 +1,17 @@
 const mongoose = require('mongoose');
 
-// const allSchema = mongoose.Schema({
-//     title: {type: 'string', required: true},
-//     // location: {type: 'string', required: true},
-//     location: {type: mongoose.Schema.Types.ObjectId, ref:"locations", required: true},
-//     tags :  {type: mongoose.Schema.Types.ObjectId, ref:"works", required: true},
-//     skill: {type: mongoose.Schema.Types.ObjectId, ref:"skills", required: true}
-// }, {
-//     versionKey: false,
-//     timestamps: true
+// var UserSchema = new mongoose.Schema({
+//     mobile : Number,
+//     password: String,
 // });
 
-const usersSchema = mongoose.Schema({
-    mobile: {type: Number,required:true},
+// module.exports = mongoose.model('user',UserSchema);
+
+const usersSchema = new mongoose.Schema({
+    mobile: {type: Number,required:true, },
     password: {type: String, required: true}
 }, {
-    versionKey: false,
+   
     timestamps: true
 });
 
