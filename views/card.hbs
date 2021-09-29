@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/Top.css">
     <title>Cart</title>
     <style>
   
@@ -59,7 +59,6 @@
         top: 200px;
         bottom: 100px;
         background-color: white;
-        margin-left:120px;
         
 }
 #top button{
@@ -89,7 +88,9 @@
     float:right;*/
    margin-right: 5%;
    color: #90A4AE;
+=======
    
+>>>>>>> d734ce7d821fd7ea4ec62e02b771fef31a0cc7d1
  
 }
 h3{
@@ -120,7 +121,19 @@ h3{
     text-align: center;
     padding-top: 20px;
   color: #90A4AE;
+#top-box{
+	height: 60px;
+	box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.15);
+	display: flex;
+	margin-top: 0;
+	width: 100%;
+	padding: 10px 10px;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	justify-content: space-between;
 }
+
 
     </style>
    
@@ -141,12 +154,7 @@ h3{
             
         </div>
         <h1>Cart Items</h1>
- <!-- <div id="top">
-   
-<p  id="total"></p> 
-    <p  id="totalitem"></p>
-    <button><a href="address.html">payment</a></button>
-</div> -->
+
  <div id="top">
      <div id="mini">
         <div id="help">Need help? 922330022</div>
@@ -183,7 +191,7 @@ h3{
 <script>
 
      let card_data = JSON.parse(localStorage.getItem("card"));
-    console.log("card_data:", card_data);
+  
 
     let data_div = document.getElementById("data");
      var total = 0;
