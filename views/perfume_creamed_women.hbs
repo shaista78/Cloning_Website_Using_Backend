@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes</title>
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Top.css">
+
+    <style>
+        #data {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            align-items: center;
+        }
+
+        #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
+
+        .prz {
+            font-size: 17px;
+            line-height: 0px;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover .hide {
+            display: block;
+            color: rgb(241, 234, 234);
+        }
+         h1{
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+
+                 <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+            </div>
+            
+        </div>
+ <h1>Perfumed Creams & Solid Perfumes</h1>
+
+    <div id="data"></div>
+</body>
+
+</html>
+<script>
+
+    //Fragrance for women
+    const perfumed_creamed = [
+        {
+            name: "Body Cupid Adventure Eaude Perfume - for Men - 100 ml",
+            image: "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239405/body-cupid-adventurer-eau-de-perfume-for-men-100-ml_1_display_1621504838_017f26a8.jpg",
+            rating: 2.8,
+            price: "₹749",
+        }, {
+            name: "Anour Cocktail Drop Solid Perfume",
+            image: "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/192001/anour-cocktail-drop-solid-perfume_1_display_1601981167_0406d05e.jpg",
+            rating: 3.6,
+            price: "₹250",
+        }, {
+            name: "Body Cupid Breathaker Eaude Perfume ",
+            image: "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239406/body-cupid-breathtaker-eau-de-perfume-for-men-100-ml_1_display_1621504878_dadce7ae.jpg",
+            rating: 4.3,
+            price: "₹749",
+        }, {
+            name: "Body Cuid Peach Addict Bosy Mist 100 ml",
+            image: "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239410/body-cupid-peach-addict-body-mist-100-ml_1_display_1621504917_8cd961d9.jpg",
+            rating: 4.5,
+            price: "₹249",
+        }, {
+            name: "Sanfe Underram Anti Perspirant & Odour",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/240093/sanfe-anti-perspirant-deo-cream-60g_2_display_1627971783_27d6dc99.jpg",
+            rating: 4.5,
+            price: "₹299",
+        }, {
+            name: "Body Cupid Peach Addict Body Mist 100ml",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/239410/body-cupid-peach-addict-body-mist-100-ml_1_display_1621504917_8cd961d9.jpg",
+            rating: 3.8,
+            price: "₹224",
+        }, {
+            name: "Avon LITTLE BLACK DRESS PURSE SPRAY",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/241382/avon-little-black-dress-purse-spray_4_display_1622703136_0c32d307.jpg",
+            rating: 4.4,
+            price: "₹458",
+        }, {
+            name: "Love Earth Bed Linen Spray Lavender",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/228089/love-earth-bed-linen-spray-lavender_1_display_1612591381_d5fd7b83.jpg",
+            rating: 4.4,
+            price: "₹249",
+        }, {
+            name: "Ohria Ayurvada Rose And Oudh Luxury Copper Candlr",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/226107/ohria-ayurveda-rose-and-oudh-luxury-copper-candle-370-g_1_display_1611636376_7c8b55c6.jpg",
+            rating: 5,
+            price: "₹1550",
+        }, {
+            name: "Love Earth Reed Diffuser 30 ml - Orange",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/228096/love-earth-reed-diffuser-30ml-orange_1_display_1612591482_33cae9d7.jpg",
+            rating: 5,
+            price: "₹630",
+        }, {
+            name: "Love Earth Reed Diffuser - Jasmin",
+            image: "https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/228098/love-earth-reed-diffuser-30ml-jasmine_1_display_1612591512_aeddfcc9.jpg",
+            rating: 3.9,
+            price: "₹630",
+        }, {
+            name: "Anour Cocktail Drop Solid Perfume",
+            image: "https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/192001/anour-cocktail-drop-solid-perfume_1_display_1601981167_0406d05e.jpg",
+            rating: 3.6,
+            price: "₹250",
+        },
+    ];
+    const perfumes_json = JSON.stringify(perfumed_creamed);
+
+    localStorage.setItem("women_perfume", perfumes_json);
+
+    let women_perfume = localStorage.getItem("women_perfume");
+    women_perfume = JSON.parse(women_perfume);
+
+    function viewPerfumes() {
+        console.log(women_perfume);
+        let data = document.getElementById("data");
+
+        women_perfume.forEach(function (product) {
+            let div = document.createElement("div");
+            div.setAttribute("class", "myDIV")
+            let name = document.createElement("p");
+            name.innerText = product.name;
+            name.setAttribute("class", "txt")
+
+            let price = document.createElement("p");
+            price.innerText = product.price;
+            let image = document.createElement("img");
+            price.setAttribute("class", "prz")
+            image.src = product.image;
+
+            
+            let rating = document.createElement("p");
+            rating.innerText = product.rating;
+            rating.style.color = "red"
+            rating.style.float = "right"
+            rating.style.backgroundColor = "green"
+
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add to cart"
+            btn.style.width = "100%"
+            btn.style.height = "40px"
+            btn.style.backgroundColor = "#004d40"
+            btn.style.fontSize = "25px"
+            btn.style.cursor="pointer"
+            btn.setAttribute("class", "hide")
+            btn.onclick = function () {
+                addtoCard(product);
+            }
+            name.append(price)
+            price.append(rating)
+            div.append(image, btn, name);
+            data.append(div);
+        });
+    }
+
+    viewPerfumes();
+    if (localStorage.getItem("card") === null) {
+        localStorage.setItem("card", JSON.stringify([]));
+    }
+
+
+    var cardtemp = [];
+    function addtoCard(p) {
+
+
+        let card_data = JSON.parse(localStorage.getItem("card"));
+
+        for (key in card_data) {
+            cardtemp.push(card_data[key].name);
+        }
+        if (cardtemp.indexOf(p.name) != -1) {
+            
+        } else {
+            card_data.push(p);
+        }
+        localStorage.setItem("card", JSON.stringify(card_data));
+
+    }
+</script>

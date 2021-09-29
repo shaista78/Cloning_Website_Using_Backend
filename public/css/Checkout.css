@@ -1,0 +1,113 @@
+
+#in{
+	margin: 0;
+	height: 30px;
+	background-color:#E0E0E0;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#debit{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px 20px;
+}
+
+#debit input {
+	height: 30px;
+	outline: none;
+}
+
+#bt{
+	height: 40px;
+	padding: 10px 10px;
+	width: 150px;
+}
+
+#card{
+	width: 220px;
+}
+
+#card-top{
+	display: flex;
+	gap: 15px;
+}
+
+#card-bottom{
+	display: flex;
+	gap: 15px;
+}
+#check{
+	height: 20px;
+	margin: 0;
+}
+
+
+.bottom{
+
+	display: flex;
+	flex-direction: column;
+	margin-left: 0;
+}
+
+button{
+	background-color: #F50057;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+}
+
+p{
+	font-family: sans-serif;
+}
+
+
+
+#new1{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+#line{
+	width: 100%;
+	height: 1px;
+	background-color: lightgrey;
+}
+
+#green{
+	height: 500px;
+	border-color: lightgrey;
+	background-color: #eee;
+	width: 100%;
+}
+
+#second{
+	padding: 10px 10px;
+}
+
+button{
+	padding: 20px 20px;
+}
+
+#checkboxx{
+	display: flex;
+	gap: 10px;
+	padding: 20px 20px;
+
+}
+
+#checkboxx p{
+	font-family: arial;
+	font-size: 16px;
+}
+
+#second > div > p{
+	color: #90A4AE;
+	border: 1px red;
+}
+#lal{
+	color: red;
+}

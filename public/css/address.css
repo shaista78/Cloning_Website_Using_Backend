@@ -1,0 +1,158 @@
+#toop{
+    width: 75%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    }
+    #box{
+ 
+    width: 55%;
+   float: left;
+   margin-right: 50px;
+}
+#Address{
+    display: block;
+    border: 2px solid #E0E0E0 ;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    
+   
+    
+   }
+  
+/* #box > div {
+    display: flex;
+} */
+#mrp{
+    margin-left: 62%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+#mini{
+    margin-top: 100px;
+    width: 30%;
+  /* border: 1px solid yellow; */
+    float:right;
+   margin-right: 5%;
+   color: #90A4AE;
+ 
+}
+h3{
+    color: black;
+}
+
+#smallBox > div {
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+   
+}
+.mrp{
+
+    margin-left: 50%;
+}
+.ship{
+    margin-right: 50%;
+}
+.dis{
+    margin-left: 50%;
+}
+#help{
+    border: 1px solid #CFD8DC;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+  color: #90A4AE;
+}
+   #T_bar{
+       /* max-width: 600px;
+       max-height: 50px; */
+       color:#212121;
+       font-family: system-ui;
+
+   }
+   h2{
+       /*background-color:#E0E0E0; */
+       margin-top: 0px;
+   }
+   #Add_form > div{
+     margin-top: 50px;
+     border: 1px solid white;
+     border-bottom: 1px solid gray;
+     width: 70%;
+   }
+   #Add_form > div > input{
+       border: 0px solid white;
+       margin-bottom: 10px;
+       outline: none;
+   }
+   #cit_stat{
+       display:flex;
+
+   }
+   #stat{
+       margin-left: 30px;
+   }
+   #T_add{
+       display: flex;
+       margin-top: 30px;
+       
+   }
+   select{
+       margin-left: 20px;
+   }
+   #continue{
+       height: 40px;
+       max-width: 200px;
+       color: white;
+       background-color:#e02378;
+       border-radius: 2px;
+       text-align: center;
+       margin: auto;
+       border: 0px solid #e02378;
+       cursor: pointer;
+   }
+   #continue > p{
+       margin: auto;
+       padding-top: 6px;
+   }
+   #manage{
+       display: flex;
+       margin-left: 0px;
+   }
+   #Jeet{
+       margin-left: 20px;
+       border: 0px solid white;
+   }
+   #Jeet > input{
+       border: 1px solid white;
+       outline: none;
+    
+   }
+   #cit_stat > div > input{
+       border: 0px solid white;
+       margin-bottom: 10px;
+       outline: none;
+   }
+  #Jeet  > input{
+      margin-bottom: 10px;
+      outline: none;
+  }
+  select{
+      border: none;
+  }
+  .clear{
+      clear: both;
+  }
+.flt{
+    float: left;
+}
+
+#warn{
+    color: red;
+    font-size: 20px;
+    margin-left: 31%;
+    padding: 10px;
+}
