@@ -184,19 +184,19 @@ button{
                 </div>
                 
             </div>
-            
-
+            {{!-- const home = require('./home') --}}
+<form action="register" method="post">
     <div id="popup">
 
         <h2>Login/Create Account</h2>
         <p>Enter your Mobile Number* </p>
         <p id="mess"></p>
-        <input  id="nu" type="text" placeholder="Enter your Number">
+        <input  id="nu" type="text" placeholder="Enter your Number" name="mobile">
         
         <p>Enter Your Password </p>
         <p id="mess1"></p>
         
-        <input id="pas" type="password" placeholder="Enter your Password"  >
+        <input id="pas" type="password" placeholder="Enter your Password" name="password" >
         <p id="wr"></p>
         <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Create/Login</button>
         <p id="check"></p>
@@ -214,5 +214,16 @@ button{
             </div>
          </div>
         <div>
+            </form>
 </body>
 </html>
+
+<script>
+
+    const value = {
+        const mobile: document.getElementById("nu").value;
+        const password: document.getElementById("pas").value;
+    }
+
+    module.exports = value;
+</script>

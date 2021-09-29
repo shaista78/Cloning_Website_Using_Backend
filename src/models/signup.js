@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 // });
 
 const usersSchema = mongoose.Schema({
-    mobiles: {type: Number,required:true, unique: true},
+    mobile: {type: Number,required:true},
     password: {type: String, required: true}
 }, {
     versionKey: false,
