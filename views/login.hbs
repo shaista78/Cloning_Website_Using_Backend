@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="../css/signup.css">
+  	<link rel="stylesheet" href="../css/signup.css">
     <!-- <link rel="stylesheet" href="../css/Top.css"> -->
     <script src="../scripts/signup.js"></script>
     <style>
@@ -32,17 +32,19 @@
                 </div>
                 
             </div>
-
+            
+<form method="post" action="login">
     <div id="popup">
+
         <h2>Login/Create Account</h2>
         <p>Enter your Mobile Number* </p>
         <p id="mess"></p>
-        <input  id="nu" type="text" placeholder="Enter your Number">
+        <input  id="nu" type="text" placeholder="Enter your Number" name="ida">
         
         <p>Enter Your Password </p>
         <p id="mess1"></p>
         
-        <input id="pas" type="password" placeholder="Enter your Password" >
+        <input id="pas" type="password" placeholder="Enter your Password" name="cred" >
         <p id="wr"></p>
         <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Create/Login</button>
         <p id="check"></p>
@@ -60,5 +62,6 @@
             </div>
          </div>
         <div>
+            </form>
 </body>
 </html>

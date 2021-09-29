@@ -21,7 +21,7 @@ app.get("/card",(req,res) =>{
 
 
 
-app.listen(3000,async()  =>{
+app.listen(3000, async () => {
     await connect();
 
     console.log("connected to DB and running on port 3000");

@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="../css/signup.css">
+    {{!-- <link rel="stylesheet" href="../src/public/css/roh.css"> --}}
     <!-- <link rel="stylesheet" href="../css/Top.css"> -->
-    <script src="../scripts/signup.js"></script>
-    <style>
-
-#logo{
+    {{!-- <script src="../scripts/signup.js"></script> --}}
+   	<link rel="stylesheet" href="../css/signup.css">
+  	<style>
+        #logo{
     width: 7%;
     margin-left: 45%;
     margin-top: 10px;
 }
 
-    </style>
+      </style>
+  
 
 </head>
 <body>
@@ -32,17 +33,19 @@
                 </div>
                 
             </div>
-
+            {{!-- const home = require('./home') --}}
+<form action="register" method="post">
     <div id="popup">
+
         <h2>Login/Create Account</h2>
         <p>Enter your Mobile Number* </p>
         <p id="mess"></p>
-        <input  id="nu" type="text" placeholder="Enter your Number">
+        <input  id="nu" type="text" placeholder="Enter your Number" name="mobile">
         
         <p>Enter Your Password </p>
         <p id="mess1"></p>
         
-        <input id="pas" type="password" placeholder="Enter your Password" >
+        <input id="pas" type="password" placeholder="Enter your Password" name="password" >
         <p id="wr"></p>
         <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Create/Login</button>
         <p id="check"></p>
@@ -60,5 +63,6 @@
             </div>
          </div>
         <div>
+            </form>
 </body>
 </html>
