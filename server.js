@@ -1,8 +1,10 @@
 const express = require('express');
-
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const connect = require('./configs/db');
+
+const Products = require('./models/admin');
 
 const app = express();
 
@@ -49,16 +51,16 @@ app.get('/body_mist_women.hbs',(req,res)=>{
 })
 
 app.get('/card.hbs',(req,res)=>{
-    res.render('card.hbs');
+    res.render('card');
+})
+
+app.get('/admin', (req,res)=>{
+    res.render('admin')
 })
 
 
-
-
-
-
-
 app.listen(3000, async() =>{
+    await connect();
 
     console.log("Connected to DB and Running on port 3000")
 })
