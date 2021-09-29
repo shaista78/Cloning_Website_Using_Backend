@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes</title>
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Top.css">
+    <style>
+      #data {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            align-items: center;
+        }
+        
+         #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #btn{
+            display: block;
+        }
+        
+              .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
+
+        .prz {
+            font-size: 17px;
+            line-height: 0px;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover .hide {
+            display: block;
+            color: rgb(241, 234, 234);
+        }
+         h1{
+            text-align: center;
+            font-size: 50px;
+        }
+          #banner{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+margin-top: 100px;
+	
+}
+    </style>
+</head>
+<body>
+
+
+
+
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+
+                <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+
+            </div>
+            
+        </div>
+        
+        <h1>Perfumes</h1>
+    <div id="data"></div>
+</body>
+</html>
+<script>
+
+//Fragrance for women
+const aftershaves=[
+{
+    name:"Nivea MEN Shaving Deep",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/209762/nivea-men-deep-impact-comfort-after-shave-lotion-100-ml_6_display_1551352705_4438dd9e.jpg",
+    rating: 4.5,
+    price: "₹203",
+},{
+    name:"Volamena For Men After Shave Balm",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/244652/volamena-for-men-after-shave-balm-100-ml_1_display_1624864028_a04face2.jpg",
+    rating:4.5 ,
+    price: "₹297",
+},
+{
+    name:"Mancode Shaving Essential Pre shave And After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/225879/mancode-shaving-essentials-pre-shave-balm-100gm-after-shave-balm-100gm-to-give-luxury-shaving-experience-100gram-balm-formulated-for-men-by-mancode_1_display_1611226544_8f9fd80a.jpg",
+    rating: 4.7,
+    price: "₹449",
+},
+{
+    name:"old Spice Original After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/131225/old-spice-after-shave-lotion-100-ml-original-34_1_display_1628752092_1a6a30ce.jpg",
+    rating: 4.8,
+    price: "₹215",
+},
+{
+    name:"Old Spice Musk After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/132322/old-spice-musk-after-shave-lotion-150-ml_1_display_1512989799_3b24eff0.jpg",
+    rating: 4.7,
+    price: "₹250",
+},
+{
+    name:"Biotique Bio Wild Grass Sooting After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/99092/biotique-bio-wild-grass-a-soothing-after-shave-gel-for-men-120-ml_1_display_1537012714_3b1159c6.jpg",
+    rating:3.9 ,
+    price: "₹144",
+},
+{
+    name:"Bombay Shaving Company Defender For Her After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/229964/bombay-shaving-company-defender-for-her-after-shave-soothing-gel-for-women-for-post-shave-moisturisation-and-hydration-100-g_1_display_1614075574_091bbe56.jpg",
+    rating:4.7 ,
+    price: "₹236",
+},
+{
+    name:"Nivea Men Vitalizing After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/229286/nivea-for-men-after-shave-lotion-100-ml_4_display_1551352493_e7062a9d.jpg",
+    rating:3.7 ,
+    price: "₹206",
+},
+{
+    name:"Sanfe mens After Shave & Wax Nourshing oil",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/240084/sanfe-after-shave-and-wax-nourishing-oil-100ml_2_display_1627971508_e11ce2c8.jpg",
+    rating:4.5 ,
+    price: "₹349",
+},
+{
+    name:"Axe Signture Tempt After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/205988/axe-signture-tempt-after-shave-lotion-50-ml_2_display_1565340513_565589f0.jpg",
+    rating: 4.6,
+    price: "₹130",
+},
+{
+    name:"Man Arden Face Care Gift Box For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/167494/man-arden-face-care-gift-box-for-men-7x-after-shave-balm-charcoal-face-scrub-charcoal-face-mask_7_display_1611405448_7208f9e9.jpg",
+    rating:4.6 ,
+    price: "₹847",
+},
+{
+    name:"Vetoni ice King No. 1 Natural After Shave Lotion for Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/232245/vetoni-ice-king-no-1-natural-after-shave-lotion-for-men-soothes-irritation-from-shaving-moisturizes-and-repairs-skin-prevents-razor-burn-leaves-skin-feeling-smooth-and-soft-50-ml-blue_1_display_1617949772_ac1fd955.jpg",
+    rating:3.6 ,
+    price: "₹95",
+},
+
+];
+
+    const perfumes_json = JSON.stringify(aftershaves);
+
+    localStorage.setItem("women_perfume", perfumes_json);
+
+    let women_perfume = localStorage.getItem("women_perfume");
+women_perfume = JSON.parse(women_perfume);
+
+    function viewPerfumes() {
+        console.log(women_perfume);
+        let data = document.getElementById("data");
+
+       women_perfume.forEach(function (product) {
+           let div = document.createElement("div");
+           div.setAttribute("class", "myDIV")
+            let name = document.createElement("p");
+            name.innerText = product.name;
+            name.setAttribute("class", "txt")
+
+            let price = document.createElement("p");
+            price.innerText = product.price;
+            let image = document.createElement("img");
+            price.setAttribute("class", "prz")
+            image.src = product.image;
+
+            
+            let rating = document.createElement("p");
+            rating.innerText = product.rating;
+            rating.style.color = "red"
+            rating.style.float = "right"
+            rating.style.backgroundColor = "green"
+
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add to cart"
+            btn.style.width = "100%"
+            btn.style.height = "40px"
+            btn.style.backgroundColor = "#004d40"
+            btn.style.fontSize = "25px"
+            btn.style.cursor="pointer"
+            btn.setAttribute("class", "hide")
+            btn.onclick = function () {
+                addtoCard(product);
+            }
+            name.append(price)
+            price.append(rating)
+            div.append(image, btn, name);
+            data.append(div);
+        });
+    }
+viewPerfumes();
+    if (localStorage.getItem("card") === null) {
+        localStorage.setItem("card", JSON.stringify([]));
+    }
+
+
+   var cardtemp=[];
+    function addtoCard(p) {
+
+
+        let card_data = JSON.parse(localStorage.getItem("card"));
+        
+        for(key in card_data){
+            cardtemp.push(card_data[key].name);
+        }
+        if(cardtemp.indexOf(p.name)  != -1){
+            
+        }else{
+            card_data.push(p);
+        }
+        localStorage.setItem("card", JSON.stringify(card_data));
+
+    }
+    </script>

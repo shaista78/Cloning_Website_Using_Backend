@@ -1,0 +1,468 @@
+<script>
+const deodorants_roll=[
+{
+    name:"NIVEA Deodorant Roll On Whitening Smooth Skin 50ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/203380/new-nivea-whitening-smooth-skin-roll-on-50-ml1_2_display_1557736874_1fa9174c.jpg",
+    rating: 3.6,
+    price: 159,
+},{
+    name:"Nivea Deodorant Roll On, Peral & Beauty 50 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/201720/nivea-pearl-and-beauty-deo-roll-on-for-women-50-g-10_1_display_1553339041_0ddbdc32.jpg",
+    rating: 4.0,
+    price: 149,
+},{
+    name:"Nivea Deodorant Roll On, Peral & Beauty 150 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/246891/nivea-deodorant-pearl-beauty-for-women-150-ml_2_display_1551356300_9d8e6ddd.jpg",
+    rating: 4.5,
+    price: 180,
+},{
+    name:"Nivea Deodorant DEO MILK Sensitive Roll On(40 ml) ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/199330/nivea-women-deodorant-deo-milk-sensitive-roll-on-40-ml_1_display_1588660686_68e3b7b9.jpg",
+    rating:4.4 ,
+    price:158 ,
+},{
+    name:"NIVEA Deodorant Roll On Whitening Smooth Skin 25ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239646/nivea-women-deodorant-roll-on-whitening-smooth-skin-25-ml_1_display_1621931680_42cfbaf3.jpg",
+    rating:4.3 ,
+    price: 99,
+},{
+    name:"Eva Fresh 125ml Skin Friendly",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/199100/eva-deo-fresh-125-ml-74_2_display_1624275951_91f09f88.jpg",
+    rating: 4.4,
+    price:140 ,
+},{
+    name:"Engage Floral Zest Deodorant for Women Citrus & spicy Skin Friendly, 150ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/242247/engage-floral-zest-deodorant-for-women-citrus-and-floral-skin-friendly-150ml_7_display_1628267322_5de70352.jpg",
+    rating:4.5 ,
+    price: 150,
+},{
+    name:"Dove Eventone Deodorant For Women, 150ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/230723/dove-eventone-deodorant-for-women-150-ml_1_display_1614830903_c40a2e21.jpg",
+    rating:4.0 ,
+    price: 176 ,
+},{
+    name:"Paco Rabanne Lady Millon Deodorant for Women 150 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/151316/paco-rabanne-lady-million-deodorant-for-women-150-ml_1_display_1535460405_822d0538.jpg",
+    rating:5 ,
+    price: 1279 ,
+},{
+    name:"NIVEA WOMAN Deodorant DEO MILK Fresh 150 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/199328/nivea-women-deodorant-deo-milk-fresh-150-ml_1_display_1588660766_2bd3e900.jpg",
+    rating:5 ,
+    price: 191,
+},{
+    name:"Plum BodyLovin Orchid You",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/234578/plum-bodylovin-orchid-you-not-body-mist_5_display_1617873623_ef07596b.jpg",
+    rating: 4.3,
+    price: 473,
+},{
+    name:"Ital Veloce La Bella Fine Fragrance Mist 210 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/207300/ital-veloce-la-bella-fine-fragrance-mist-210-ml_1_display_1600079393_c6928210.jpg",
+    rating: 3.9 ,
+    price: 699 ,
+},
+];
+//console.log(perfumes);
+const body_Mists_sprays=[
+{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/234938/body-cupid-apple-blossom-body-mist-100-ml_1_display_1620032335_8c1cfd04.jpg",
+    name:"Body Cupid Apple Blossom Body Mist - 100 ml",
+    rating: 4.5,
+    price: 249,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/116438/yardley-morning-dew-refreshing-body-spray-150-ml-yardley-english-lavendar-luxury-soap-50-g_2_display_1626412412_feb994ce.jpg",
+    name:"Yardley London Morning Dew Body Spray For Women 150 ml",
+    rating: 3.5,
+    price: 170,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/215623/body-cupid-raspberry-burst-body-mist_1_display_1605077480_c0914f48.jpg",
+    name:"Body Cupid Raspberry Burst Body mist",
+    rating: 4.0,
+    price: 224,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/215622/body-cupid-lavender-body-mist-100-ml_1_display_1605077453_7cca277d.jpg",
+    name:"Body Cupid Lavender Body Mist 100ml",
+    rating:4.5 ,
+    price: 224,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/215616/body-cupid-mint-and-tea-tree-body-mist-100-ml_1_display_1605077333_5409b000.jpg",
+    name:"Body Cupid Mint & Tea Tree Body mist 100 ml ",
+    rating: 4.5 ,
+    price: 224,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/215617/body-cupid-citrus-love-body-mist-100-ml_1_display_1605077359_0b8447a3.jpg",
+    name:"Body Cupid Citrus Love Body mist 100ml",
+    rating: 4.0,
+    price: 224,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/215620/body-cupid-cucumber-and-melon-body-mist_1_display_1605077421_0727097e.jpg",
+    name:"Body Cupid Cucumber and Melon Body Mist",
+    rating:5,
+    price: 224,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/203432/plum-bodylovin-hawaiian-rumba-body-mist_2_display_1598422738_fd35b3d6.jpg",
+    name:"Plum BodyLovin Hawaiian Rumba Body Mist",
+    rating: 3.4,
+    price: 473,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/246542/yardley-london-mist-cologen-17_2_display_1626412822_0d7bb0cb.jpg",
+    name:"Yardley London Mist Daily Wear Perfume ",
+    rating:4.3 ,
+    price: 495,
+},{
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/114518/yardley-red-roses-deo-150-ml-19_1_display_1510548886_09d1d606.jpg",
+    name:"Yardly London Red Roses Deodorant 150 ml",
+    rating: 4.6,
+    price: 170,
+},{
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/137707/armaf-1-club-de-nit-women-1-hunter-for-men-body-mist-for-men-and-women-500-ml-pack-of-2_1_display_1517211026_ac21e557.jpg",
+    name:"Armaf 1 club De Nit Women ",
+    rating: 4.6,
+    price: 799,
+},{
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/235958/the-paradise-tree-s-mysore-sandalwood-after-shower-mist_1_display_1618924078_d8a9cdd8.jpg",
+    name:"The Paradise Trees Mysore Sandalwood After Shower",
+    rating:5.0 ,
+    price: 550,
+},
+];
+const perfumed_creamed =[
+{
+    name:"Body Cupid Adventure Eaude Perfume - for Men - 100 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239405/body-cupid-adventurer-eau-de-perfume-for-men-100-ml_1_display_1621504838_017f26a8.jpg",
+    rating:2.8 ,
+    price: 749,
+},{
+    name:"Anour Cocktail Drop Solid Perfume",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/192001/anour-cocktail-drop-solid-perfume_1_display_1601981167_0406d05e.jpg",
+    rating:3.6 ,
+    price: 250,
+},{
+    name:"Body Cupid Breathaker Eaude Perfume ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239406/body-cupid-breathtaker-eau-de-perfume-for-men-100-ml_1_display_1621504878_dadce7ae.jpg",
+    rating: 4.3,
+    price: 749,
+},{
+    name:"Body Cuid Peach Addict Bosy Mist 100 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239410/body-cupid-peach-addict-body-mist-100-ml_1_display_1621504917_8cd961d9.jpg",
+    rating:4.5 ,
+    price: 249,
+},{
+    name:"Sanfe Underram Anti Perspirant & Odour",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/240093/sanfe-anti-perspirant-deo-cream-60g_2_display_1627971783_27d6dc99.jpg",
+    rating:4.5 ,
+    price: 299,
+},{
+    name:"Body Cupid Peach Addict Body Mist 100ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/239410/body-cupid-peach-addict-body-mist-100-ml_1_display_1621504917_8cd961d9.jpg",
+    rating: 3.8,
+    price: 224,
+},{
+    name:"Avon LITTLE BLACK DRESS PURSE SPRAY",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/241382/avon-little-black-dress-purse-spray_4_display_1622703136_0c32d307.jpg",
+    rating: 4.4,
+    price: 458,
+},{
+    name:"Love Earth Bed Linen Spray Lavender",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/228089/love-earth-bed-linen-spray-lavender_1_display_1612591381_d5fd7b83.jpg",
+    rating:4.4 ,
+    price: 249,
+},{
+    name:"Ohria Ayurvada Rose And Oudh Luxury Copper Candlr",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/226107/ohria-ayurveda-rose-and-oudh-luxury-copper-candle-370-g_1_display_1611636376_7c8b55c6.jpg",
+    rating: 5,
+    price: 1550,
+},{
+    name:"Love Earth Reed Diffuser 30 ml - Orange",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/228096/love-earth-reed-diffuser-30ml-orange_1_display_1612591482_33cae9d7.jpg",
+    rating: 5,
+    price: 630,
+},{
+    name:"Love Earth Reed Diffuser - Jasmin",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/228098/love-earth-reed-diffuser-30ml-jasmine_1_display_1612591512_aeddfcc9.jpg",
+    rating:3.9 ,
+    price: 630,
+},{
+    name:"Anour Cocktail Drop Solid Perfume",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/192001/anour-cocktail-drop-solid-perfume_1_display_1601981167_0406d05e.jpg",
+    rating:3.6 ,
+    price: 250,
+},
+];
+
+//Fagarance for men
+const perfumes_men=[
+{
+    name:"Engage G! Cologne Spray For men 135ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/242161/engage-g1-cologne-spray-for-women-135ml_1_display_1624277065_7f8aef10.jpg",
+    rating:4.4,
+    price: 173,
+},{
+    name:"Ustraa Malt - Perfume For Men 100ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/228839/ustraa-malt-perfume-for-men-100ml_1_display_1613620202_f9ba65d0.jpg",
+    rating:4.0,
+    price: 1124,
+},
+{
+    name:"Davidoff Cool Water Man EDT 125 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/2583/davidoff-cool-water-man-edt-125-ml_1_display_1494394498_8676554f.jpg",
+    rating:4.3,
+    price: 2235,
+},
+{
+    name:" Armaf Tag - Him Pour Homme Perfume For Men",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/150980/armaf-tag-him-pour-homme-perfume-for-men-100-ml_1_display_1471849893_dba30bbb.jpg",
+    rating:3.8,
+    price: 1199,
+},
+{
+    name:"Luxure Oudh Perfume by LA'FRENCH 100 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/230525/luxure-oudh-perfume-by-la-french-100-ml_1_display_1615375352_86559194.jpg",
+    rating:4.3,
+    price: 499,
+},
+{
+    name:" Engage ON Citurs Fresh Pocket Perfume for men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max,oi-Best_Seller_235x235small_e0fLESWoel.png,ofo-top_right/static/img/product/242168/engage-on-citrus-fresh-pocket-perfume-for-men-18-4-ml_1_display_1624276264_d2007035.jpg",
+    rating:4.5,
+    price: 60,
+},
+{
+    name:"Davidoff hot Water Man EDT 110 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/3256/davidoff-hot-water-man-edt-110-ml_1_display_1448273083_5b9154d4.jpg",
+    rating:4.6,
+    price: 2475,
+},
+{
+    name:" Beardo Dark Side EDP ",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/216844/beardo-dark-side-edp-100-ml_1_display_1606288583_020f2fc4.jpg",
+    rating:4.7,
+    price: 750,
+},
+{
+    name:" Engage Yang Eau De Parfum Perfume for men ",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/242179/engage-yang-eau-de-parfum-perfume-for-women-90ml_7_display_1624275290_b4c44be2.jpg",
+    rating: 4.3,
+    price: 424,
+},
+{
+    name:"Ustraa Scuba Cologne For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/221386/ustraa-scuba-cologne-for-men-100-ml-freshness-of-the-deep-sea-aquatic-fougere-fragrance-mixed-with-woody-floral-and-spicy-notes-that-last-long_2_display_1611567786_c5a5d99c.jpg",
+    rating:5.0,
+    price: 599,
+},
+{
+    name:"Denver Perfume Hamilton",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/106398/denver-perfume-hamilton-100-ml_1_display_1489582069_39d01c5a.jpg",
+    rating:4.3,
+    price: 499,
+},
+{
+    name:"Calvin Klen Be Unisex Edt",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/98590/calvin-klein-be-unisex-edt-200-ml_2_display_1472908348_d772d629.jpg",
+    rating:5.0,
+    price: 3115,
+},
+
+];
+const deodarants_rollons_men=[
+{
+    name:"Axe Signature Gold Temptation , No Gas Body",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/210047/axe-signature-gold-temptation-no-gas-body-deodorant-for-men-154-ml_6_display_1601899070_54fb1aa2.jpg",
+    rating:3.5,
+    price: 213,
+},{
+    name:"Rexona Aloe Vera Underaram Roll On Deodorant ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/230737/rexona-aloe-vera-underarm-roll-on-deodorant-for-women-50-ml_1_display_1614832114_859c6942.jpg",
+    rating:4.3 ,
+    price: 135,
+},{
+    name:"Axe Dark Temptation Long Lasting Deadorant",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/234654/axe-dark-temptation-long-lasting-deodorant-bodyspray-for-men-215-ml_1_display_1619501521_10895730.jpg",
+    rating: 2.9,
+    price: 239,
+},{
+    name:"Nivea Men Protect & Care ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/230586/nivea-men-protect-and-care-roll-on-50-ml-86_1_display_1621931764_89211e8e.jpg",
+    rating: 3.4,
+    price: 159,
+},{
+    name:"Dove Original Deodorant Roll on For men",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/230724/dove-original-deodorant-roll-on-for-women-50-ml_1_display_1614830932_0c8c589f.jpg",
+    rating: 3.9,
+    price: 200,
+},{
+    name:"Set Wet Cool Avatar ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/99742/set-wet-cool-avatar-deodorant-spray-perfume-150-ml_5_display_1627111047_83c07e68.jpg",
+    rating: 4.0,
+    price: 139,
+},{
+    name:"Ajmal 2 Distraction & Presuade",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/207223/ajmal-2-distraction-and-persuade-deodorant-combo-pack-of-4-high-quality-deodorant-200ml-each-total-800ml-for-men-and-women-4-parfum-testers_1_display_1599711124_f802c2f3.jpg",
+    rating:5.0 ,
+    price: 479,
+},{
+    name:"NIVEA MEN Deodorant Deep",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/174657/nivea-men-deep-impact-energy-deodorant-150-ml_2_display_1557987190_ad500ec4.jpg",
+    rating:3.2 ,
+    price: 199,
+},{
+    name:"Ajmal Avid & Carbon & Silver Shade",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/189140/ajmal-avid-and-carbon-and-silvershade-deodorant-spray-for-men-and-women-200-ml-pack-of-3_2_display_1583569330_a4cf8780.jpg",
+    rating: 4.8,
+    price: 599,
+},{
+    name:"NIVEA MEN Deodorant Cool Kick",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/117654/nivea-cool-kick-deo-spray-for-men-150-ml-21_8_display_1551355950_70923179.jpg",
+    rating: 4.7,
+    price: 179,
+},{
+    name:"Eva Doll Deodorant Mega Pack",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/199088/eva-doll-deodorant-150-ml-mega-pack_1_display_1588079916_4e905eb2.jpg",
+    rating:4.4 ,
+    price: 225,
+},{
+    name:"AXE Signature Suave Body Perfume",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/177348/axe-signature-suave-body-perfume-154-ml_5_display_1604380248_da71e038.jpg",
+    rating:5 ,
+    price: 216,
+},
+];
+const colognes=[
+{
+    name:"Biotique Fresh Neroli Eau De Cologne",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/107124/biotique-bio-fresh-neroli-50-ml_2_display_1583929361_2f141be0.jpg",
+    rating:3.8 ,
+    price: 559,
+},{
+    name:"Jovan Sex Appeal Eau De Cologne Perfume",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/112126/joven-sex-appeal-eau-de-cologne-perfume-spray-for-men-88-ml_1_display_1484206394_9fa6e14d.jpg",
+    rating:4.7 ,
+    price: 649,
+},{
+    name:"Ustraa by happly unmarried Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/126721/ustraa-by-happily-unmarried-cologne-spray-base-camp-deodorant-spray-for-men-100-ml_9_display_1611567573_bff904f0.jpg",
+    rating: 5,
+    price: 599,
+},{
+    name:"Jovan Musk Pour Homme Cologe Spray For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/89670/jovan-musk-for-men-cologne-spray-88-ml_1_display_1479458032_171e2f47.jpg",
+    rating:5 ,
+    price: 699,
+},{
+    name:"Jovan Combo Of Black Musk Men's Perfume",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/148454/jovan-combo-of-black-musk-men-s-perfumes-edc-88-ml-with-deodorant-150-ml_1_display_1531915507_a655923d.jpg",
+    rating:4.6 ,
+    price: 829,
+},{
+    name:"4711 Ekw Eau de Cologne 400ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/238593/4711-ekw-eau-de-cologne-400ml_2_display_1626096555_26f34a5b.jpg",
+    rating:4.6 ,
+    price: 3315,
+},{
+    name:"Ustraa by happly unmarried Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/126721/ustraa-by-happily-unmarried-cologne-spray-base-camp-deodorant-spray-for-men-100-ml_9_display_1611567573_bff904f0.jpg",
+    rating: 5,
+    price: 599,
+},{
+    name:"Jovan White Musk For men Cologe Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/112128/jovan-white-musk-for-women-cologne-spray-96-ml_1_display_1484206412_2c02a18d.jpg",
+    rating: 4.3,
+    price: 699,
+},{
+    name:"Jovan Musk Pour Homme Cologe Spray For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/89670/jovan-musk-for-men-cologne-spray-88-ml_1_display_1479458032_171e2f47.jpg",
+    rating:5 ,
+    price: 699,
+},{
+    name:"Jovan Black Musk For Men Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/150989/jovan-black-musk-for-men-cologne-spray-88-ml_1_display_1484206430_c031da6d.jpg",
+    rating:5.0 ,
+    price: 599,
+},{
+    name:"4711 Ekw Eau de Cologne 400ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/238593/4711-ekw-eau-de-cologne-400ml_2_display_1626096555_26f34a5b.jpg",
+    rating:4.6 ,
+    price: 3315,
+},{
+     name:"Jovan Black Musk For Men Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/150989/jovan-black-musk-for-men-cologne-spray-88-ml_1_display_1484206430_c031da6d.jpg",
+    rating:5.0 ,
+    price: 599,
+},
+];
+const aftershaves=[
+{
+    name:"Nivea MEN Shaving Deep",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/209762/nivea-men-deep-impact-comfort-after-shave-lotion-100-ml_6_display_1551352705_4438dd9e.jpg",
+    rating: 4.5,
+    price: 203,
+},{
+    name:"Volamena For Men After Shave Balm",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/244652/volamena-for-men-after-shave-balm-100-ml_1_display_1624864028_a04face2.jpg",
+    rating:4.5 ,
+    price: 297,
+},
+{
+    name:"Mancode Shaving Essential Pre shave And After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/225879/mancode-shaving-essentials-pre-shave-balm-100gm-after-shave-balm-100gm-to-give-luxury-shaving-experience-100gram-balm-formulated-for-men-by-mancode_1_display_1611226544_8f9fd80a.jpg",
+    rating: 4.7,
+    price: 449,
+},
+{
+    name:"old Spice Original After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/131225/old-spice-after-shave-lotion-100-ml-original-34_1_display_1628752092_1a6a30ce.jpg",
+    rating: 4.8,
+    price: 215,
+},
+{
+    name:"Old Spice Musk After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/132322/old-spice-musk-after-shave-lotion-150-ml_1_display_1512989799_3b24eff0.jpg",
+    rating: 4.7,
+    price: 250,
+},
+{
+    name:"Biotique Bio Wild Grass Sooting After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/99092/biotique-bio-wild-grass-a-soothing-after-shave-gel-for-men-120-ml_1_display_1537012714_3b1159c6.jpg",
+    rating:3.9 ,
+    price: 144,
+},
+{
+    name:"Bombay Shaving Company Defender For Her After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/229964/bombay-shaving-company-defender-for-her-after-shave-soothing-gel-for-women-for-post-shave-moisturisation-and-hydration-100-g_1_display_1614075574_091bbe56.jpg",
+    rating:4.7 ,
+    price: 236,
+},
+{
+    name:"Nivea Men Vitalizing After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/229286/nivea-for-men-after-shave-lotion-100-ml_4_display_1551352493_e7062a9d.jpg",
+    rating:3.7 ,
+    price: 206,
+},
+{
+    name:"Sanfe mens After Shave & Wax Nourshing oil",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/240084/sanfe-after-shave-and-wax-nourishing-oil-100ml_2_display_1627971508_e11ce2c8.jpg",
+    rating:4.5 ,
+    price: 349,
+},
+{
+    name:"Axe Signture Tempt After Shave",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/205988/axe-signture-tempt-after-shave-lotion-50-ml_2_display_1565340513_565589f0.jpg",
+    rating: 4.6,
+    price: 130,
+},
+{
+    name:"Man Arden Face Care Gift Box For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/167494/man-arden-face-care-gift-box-for-men-7x-after-shave-balm-charcoal-face-scrub-charcoal-face-mask_7_display_1611405448_7208f9e9.jpg",
+    rating:4.6 ,
+    price: 847,
+},
+{
+    name:"Vetoni ice King No. 1 Natural After Shave Lotion for Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/232245/vetoni-ice-king-no-1-natural-after-shave-lotion-for-men-soothes-irritation-from-shaving-moisturizes-and-repairs-skin-prevents-razor-burn-leaves-skin-feeling-smooth-and-soft-50-ml-blue_1_display_1617949772_ac1fd955.jpg",
+    rating:3.6 ,
+    price: 95,
+},
+
+];
+</script>

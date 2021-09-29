@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deodorants</title>
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Top.css">
+    <style>
+      #data {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            align-items: center;
+        }
+        
+         #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+              .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
+
+        .prz {
+            font-size: 17px;
+            line-height: 0px;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover .hide {
+            display: block;
+            color: rgb(241, 234, 234);
+        }
+         h1{
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+<a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+            </div>
+            
+        </div>
+
+<h1>Deodorants & Roll Ons</h1>
+
+    <div id="data"></div>
+</body>
+</html>
+<script>
+
+//Fragrance for women
+const deodarants_rollons_men=[
+{
+    name:"Axe Signature Gold Temptation , No Gas Body",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/210047/axe-signature-gold-temptation-no-gas-body-deodorant-for-men-154-ml_6_display_1601899070_54fb1aa2.jpg",
+    rating:3.5,
+    price: "₹213",
+},{
+    name:"Rexona Aloe Vera Underaram Roll On Deodorant ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/230737/rexona-aloe-vera-underarm-roll-on-deodorant-for-women-50-ml_1_display_1614832114_859c6942.jpg",
+    rating:4.3 ,
+    price: "₹135",
+},{
+    name:"Axe Dark Temptation Long Lasting Deadorant",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/234654/axe-dark-temptation-long-lasting-deodorant-bodyspray-for-men-215-ml_1_display_1619501521_10895730.jpg",
+    rating: 2.9,
+    price: "₹239",
+},{
+    name:"Nivea Men Protect & Care ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/230586/nivea-men-protect-and-care-roll-on-50-ml-86_1_display_1621931764_89211e8e.jpg",
+    rating: 3.4,
+    price: "₹159",
+},{
+    name:"Dove Original Deodorant Roll on For men",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/230724/dove-original-deodorant-roll-on-for-women-50-ml_1_display_1614830932_0c8c589f.jpg",
+    rating: 3.9,
+    price: "₹200",
+},{
+    name:"Set Wet Cool Avatar ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/99742/set-wet-cool-avatar-deodorant-spray-perfume-150-ml_5_display_1627111047_83c07e68.jpg",
+    rating: 4.0,
+    price: "₹139",
+},{
+    name:"Ajmal 2 Distraction & Presuade",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/207223/ajmal-2-distraction-and-persuade-deodorant-combo-pack-of-4-high-quality-deodorant-200ml-each-total-800ml-for-men-and-women-4-parfum-testers_1_display_1599711124_f802c2f3.jpg",
+    rating:5.0 ,
+    price: "₹479",
+},{
+    name:"NIVEA MEN Deodorant Deep",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/174657/nivea-men-deep-impact-energy-deodorant-150-ml_2_display_1557987190_ad500ec4.jpg",
+    rating:3.2 ,
+    price: "₹199",
+},{
+    name:"Ajmal Avid & Carbon & Silver Shade",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/189140/ajmal-avid-and-carbon-and-silvershade-deodorant-spray-for-men-and-women-200-ml-pack-of-3_2_display_1583569330_a4cf8780.jpg",
+    rating: 4.8,
+    price: "₹599",
+},{
+    name:"NIVEA MEN Deodorant Cool Kick",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/117654/nivea-cool-kick-deo-spray-for-men-150-ml-21_8_display_1551355950_70923179.jpg",
+    rating: 4.7,
+    price: "₹179",
+},{
+    name:"Eva Doll Deodorant Mega Pack",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/199088/eva-doll-deodorant-150-ml-mega-pack_1_display_1588079916_4e905eb2.jpg",
+    rating:4.4 ,
+    price: "₹225",
+},{
+    name:"AXE Signature Suave Body Perfume",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/177348/axe-signature-suave-body-perfume-154-ml_5_display_1604380248_da71e038.jpg",
+    rating:5 ,
+    price: "₹216",
+},
+];
+    const perfumes_json = JSON.stringify(deodarants_rollons_men);
+
+    localStorage.setItem("women_perfume", perfumes_json);
+
+    let women_perfume = localStorage.getItem("women_perfume");
+women_perfume = JSON.parse(women_perfume);
+
+    function viewPerfumes() {
+        console.log(women_perfume);
+        let data = document.getElementById("data");
+ women_perfume.forEach(function (product) {
+           let div = document.createElement("div");
+           div.setAttribute("class", "myDIV")
+            let name = document.createElement("p");
+            name.innerText = product.name;
+            name.setAttribute("class", "txt")
+
+            let price = document.createElement("p");
+            price.innerText = product.price;
+            let image = document.createElement("img");
+            price.setAttribute("class", "prz")
+            image.src = product.image;
+
+            
+            let rating = document.createElement("p");
+            rating.innerText = product.rating;
+            rating.style.color = "red"
+            rating.style.float = "right"
+            rating.style.backgroundColor = "green"
+
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add to cart"
+            btn.style.width = "100%"
+            btn.style.height = "40px"
+            btn.style.backgroundColor = "#004d40"
+            btn.style.fontSize = "25px"
+            btn.style.cursor="pointer"
+            btn.setAttribute("class", "hide")
+            btn.onclick = function () {
+                addtoCard(product);
+            }
+            name.append(price)
+            price.append(rating)
+            div.append(image, btn, name);
+            data.append(div);
+        });
+    }
+
+viewPerfumes();
+    if (localStorage.getItem("card") === null) {
+        localStorage.setItem("card", JSON.stringify([]));
+    }
+
+
+   var cardtemp=[];
+    function addtoCard(p) {
+
+
+        let card_data = JSON.parse(localStorage.getItem("card"));
+        
+        for(key in card_data){
+            cardtemp.push(card_data[key].name);
+        }
+        if(cardtemp.indexOf(p.name)  != -1){
+   
+        }else{
+            card_data.push(p);
+        }
+        localStorage.setItem("card", JSON.stringify(card_data));
+
+    }
+    </script>

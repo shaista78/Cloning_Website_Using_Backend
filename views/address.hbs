@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link rel="stylesheet" href="../css/address.css">
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Top.css">
+</head>
+
+<body>
+    
+    <div id="top-box">
+        <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+                <div class="basket-icons"> 
+    
+                     <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="checkout.html"><i class="fas fa-money-bill-wave-alt fa-3x" id="face"></i></a>
+               
+
+
+                </div>
+                
+            </div>
+<div id="toop">
+    <div id="box">
+        <div id="Address">
+            <div id="T_bar">
+                <h2>Add New Address</h2>
+
+
+                <form action="checkout.html" method="post" id="Add_form" >
+                    <div id="manage">
+                        <select>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                        </select>
+                        <div id="Jeet">
+                            <label>Name:</label>
+                            <input id="nam" type="text" required />
+                        </div>
+                    </div>
+                    <div>
+                        <label>Pincode*</label>
+                        <input id="pin" type="number" required/>
+                    </div>
+                    <div>
+                        <label>Address*</label>
+                        <input id="division" type="text" required/>
+                    </div>
+                    <div>
+                        <label>Landmark:</label>
+                        <input type="text" required/>
+                    </div>
+                    <div id="cit_stat">
+                        <div>
+                            <label>city:</label>
+                            <input id="cit" type="text" required/>
+                        </div>
+                        <div>
+                            <label id="stat">State:</label>
+                            <input id="sta" type="text" required/>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Mobile*</label>
+                        <input id="phone" type="number" required/>
+                    </div>
+                </form>
+            </div>
+            <div id="T_add">
+                <h3>Address type</h3>
+                <select>
+                    <option value="Home">Home</option>
+                    <option value="Office">Office</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+        </div>
+      
+        </form>
+    </div>
+
+    
+    <div id="mini">
+        <div id="help">Need help? 922330022</div>
+        <h3>Price Details</h3>
+        <div id="smallBox">
+            <div>
+                <div>Total MRP:</div>
+                <div id="mrp"></div>
+            </div>
+            <div>
+                <div class="ship">Shipping charges:</div>
+                <div>Free</div>
+            </div>
+            <div>
+                <div>Coupon Discount:</div>
+                <div class="dis">0</div>
+            </div>
+            <div>
+                
+                
+                <div></div>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="flt">
+    <p>Address type prefrences are used to plan your delivery.However,shipments can sometimes</p>
+    <p>arrive early or later then planned</p>
+    <div id="warn"></div>
+    <div id="continue">
+        <button onclick="addAddress()"  id="continue">SAVE AND CONTINUE</button> 
+      
+    
+    </div>
+    <br>
+    <br>
+    
+</div>
+
+</body>
+
+</html>
+
+<script>
+    
+
+
+
+var address = [];
+var localstorageitem = localStorage.getItem("address");
+if (localstorageitem !== null) {
+    address = JSON.parse(localstorageitem);
+}
+function addAddress(){
+    check();
+    var nam = document.getElementById("nam").value;
+    var code = document.getElementById("pin").value;
+    var stre = document.getElementById("division").value;
+    var cit = document.getElementById("cit").value;
+    var st = document.getElementById("sta").value;
+    var mobi = document.getElementById("phone").value;
+
+   
+
+    var objpro = {
+        name: nam,
+        street: stre,
+        city: cit,
+        state: st,
+        pincode: code,
+        mobile: mobi,
+
+    } 
+    address.push(objpro);
+    localStorage.setItem("address",JSON.stringify(address));
+
+};
+
+
+let card_data = JSON.parse(localStorage.getItem("card"));
+console.log("card_data:", card_data);
+
+var total = 0;
+    var totalitem =0;
+
+    card_data.forEach(function (product) {
+        var out = product.price;
+        var x = out.replace("₹","0")
+         total = total + Number(x);
+        
+         totalitem = totalitem+Number(1);
+    });
+
+     console.log(total);
+    var total_h1 = document.getElementById("mrp");
+
+
+    if(total_h1){
+
+    total_h1.innerHTML = "₹"+total;
+
+    }
+    // var totalitems = document.getElementById("totalitem");
+
+    // totalitems.innerText = `Total Items  - ${(totalitem)}`
+
+    function check() {
+        var nam = document.getElementById("nam").value;
+    var code = document.getElementById("pin").value;
+    var stre = document.getElementById("division").value;
+    var cit = document.getElementById("cit").value;
+    var st = document.getElementById("sta").value;
+    var mobi = document.getElementById("phone").value;
+
+
+    if((code.length ==6) && (stre.length > 0) && (nam.length > 0) &&  (cit.length > 0) && (st.length > 0) && (cit.length > 0) && (mobi.length == 10)){
+    console.log("yes");
+    window.location.href="checkout.html";
+
+} else{
+   let warni = document.getElementById("warn");
+   warni.innerHTML = "Please fill required fields*"
+}
+    }
+
+   
+</script>

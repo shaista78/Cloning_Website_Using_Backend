@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women_deodorant</title>
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Top.css">
+    <style>
+      #data {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            align-items: center;
+        }
+        
+         #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+                .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
+
+        .prz {
+            font-size: 17px;
+            line-height: 0px;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover .hide {
+            display: block;
+            color: rgb(241, 234, 234);
+        }
+         h1{
+            text-align: center;
+            font-size: 50px;
+        }
+           #banner{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+margin-top: 100px;
+	
+}
+    </style>
+</head>
+<body>
+
+    
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+
+                 <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+            </div>
+            
+        </div>
+          <div id="banner">
+		<a href="#"><img id="banner"
+				src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1629299681_web-3.jpg" /></a>
+	</div>
+          <h1>Deodorants & Roll Ons For Women</h1>
+    <div id="data"></div>
+    <p id="num"></p>
+</body>
+</html>
+<script>
+
+//Fragrance for women
+const deodorants_roll=[
+{
+    name:"NIVEA Deodorant Roll On Whitening Smooth Skin 50ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/203380/new-nivea-whitening-smooth-skin-roll-on-50-ml1_2_display_1557736874_1fa9174c.jpg",
+    rating: 3.6,
+    price: "₹159",
+},{
+    name:"Nivea Deodorant Roll On, Peral & Beauty 50 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/201720/nivea-pearl-and-beauty-deo-roll-on-for-women-50-g-10_1_display_1553339041_0ddbdc32.jpg",
+    rating: 4.0,
+    price: "₹149",
+},{
+    name:"Nivea Deodorant Roll On, Peral & Beauty 150 ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/246891/nivea-deodorant-pearl-beauty-for-women-150-ml_2_display_1551356300_9d8e6ddd.jpg",
+    rating: 4.5,
+    price: "₹180",
+},{
+    name:"Nivea Deodorant DEO MILK Sensitive Roll On(40 ml) ",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/199330/nivea-women-deodorant-deo-milk-sensitive-roll-on-40-ml_1_display_1588660686_68e3b7b9.jpg",
+    rating:4.4 ,
+    price:"₹158 ",
+},{
+    name:"NIVEA Deodorant Roll On Whitening Smooth Skin 25ml",
+    image:"https://media6.ppl-media.com/tr:h-250,w-250,c-at_max/static/img/product/239646/nivea-women-deodorant-roll-on-whitening-smooth-skin-25-ml_1_display_1621931680_42cfbaf3.jpg",
+    rating:4.3 ,
+    price: "₹99",
+},{
+    name:"Eva Fresh 125ml Skin Friendly",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/199100/eva-deo-fresh-125-ml-74_2_display_1624275951_91f09f88.jpg",
+    rating: 4.4,
+    price:"₹140",
+},{
+    name:"Engage Floral Zest Deodorant for Women Citrus & spicy Skin Friendly, 150ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/242247/engage-floral-zest-deodorant-for-women-citrus-and-floral-skin-friendly-150ml_7_display_1628267322_5de70352.jpg",
+    rating:4.5 ,
+    price: "₹150",
+},{
+    name:"Dove Eventone Deodorant For Women, 150ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/230723/dove-eventone-deodorant-for-women-150-ml_1_display_1614830903_c40a2e21.jpg",
+    rating:4.0 ,
+    price: "₹176" ,
+},{
+    name:"Paco Rabanne Lady Millon Deodorant for Women 150 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/151316/paco-rabanne-lady-million-deodorant-for-women-150-ml_1_display_1535460405_822d0538.jpg",
+    rating:5 ,
+    price: "₹1279",
+},{
+    name:"NIVEA WOMAN Deodorant DEO MILK Fresh 150 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/199328/nivea-women-deodorant-deo-milk-fresh-150-ml_1_display_1588660766_2bd3e900.jpg",
+    rating:5 ,
+    price: "₹191",
+},{
+    name:"Plum BodyLovin Orchid You",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/234578/plum-bodylovin-orchid-you-not-body-mist_5_display_1617873623_ef07596b.jpg",
+    rating: 4.3,
+    price: "₹473",
+},{
+    name:"Ital Veloce La Bella Fine Fragrance Mist 210 ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/207300/ital-veloce-la-bella-fine-fragrance-mist-210-ml_1_display_1600079393_c6928210.jpg",
+    rating: 3.9 ,
+    price: "₹699" ,
+},
+];
+    const perfumes_json = JSON.stringify( deodorants_roll);
+
+    localStorage.setItem("women_perfume", perfumes_json);
+
+    let women_perfume = localStorage.getItem("women_perfume");
+women_perfume = JSON.parse(women_perfume);
+
+    function viewPerfumes() {
+        console.log(women_perfume);
+        let data = document.getElementById("data");
+  women_perfume.forEach(function (product) {
+           let div = document.createElement("div");
+           div.setAttribute("class", "myDIV")
+            let name = document.createElement("p");
+            name.innerText = product.name;
+            name.setAttribute("class", "txt")
+
+            let price = document.createElement("p");
+            price.innerText = product.price;
+            let image = document.createElement("img");
+            price.setAttribute("class", "prz")
+            image.src = product.image;
+
+            
+            let rating = document.createElement("p");
+            rating.innerText = product.rating;
+            rating.style.color = "red"
+            rating.style.float = "right"
+            rating.style.backgroundColor = "green"
+
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add to cart"
+            btn.style.width = "100%"
+            btn.style.height = "40px"
+            btn.style.backgroundColor = "#004d40"
+            btn.style.fontSize = "25px"
+            btn.style.cursor="pointer"
+            btn.setAttribute("class", "hide")
+            btn.onclick = function () {
+                addtoCard(product);
+            }
+            name.append(price)
+            price.append(rating)
+            div.append(image, btn, name);
+            data.append(div);
+        });
+    }
+
+
+viewPerfumes();
+    if (localStorage.getItem("card") === null) {
+        localStorage.setItem("card", JSON.stringify([]));
+    }
+
+
+   var cardtemp=[];
+    function addtoCard(p) {
+
+
+        let card_data = JSON.parse(localStorage.getItem("card"));
+        
+        for(key in card_data){
+            cardtemp.push(card_data[key].name);
+        }
+        if(cardtemp.indexOf(p.name)  != -1){
+            var num = document.getElementById("num");
+            num.innerText="item is already added to card"
+           
+        }else{
+            card_data.push(p);
+        }
+        localStorage.setItem("card", JSON.stringify(card_data));
+
+    }
+    </script>

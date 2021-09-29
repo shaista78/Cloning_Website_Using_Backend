@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musk</title>
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Top.css">
+
+    <style>
+      #data {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            align-items: center;
+        }
+        
+         #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #btn{
+            display: block;
+        }
+        
+              .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
+
+        .prz {
+            font-size: 17px;
+            line-height: 0px;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover .hide {
+            display: block;
+            color: rgb(241, 234, 234);
+        }
+         h1{
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+
+                <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+            </div>
+            
+        </div>
+
+        <h1>Cologens</h1>
+    <div id="data"></div>
+</body>
+</html>
+<script>
+
+//Fragrance for women
+const colognes=[
+{
+    name:"Biotique Fresh Neroli Eau De Cologne",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/107124/biotique-bio-fresh-neroli-50-ml_2_display_1583929361_2f141be0.jpg",
+    rating:3.8 ,
+    price: "₹559",
+},{
+    name:"Jovan Sex Appeal Eau De Cologne Perfume",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/112126/joven-sex-appeal-eau-de-cologne-perfume-spray-for-men-88-ml_1_display_1484206394_9fa6e14d.jpg",
+    rating:4.7 ,
+    price: "₹649",
+},{
+    name:"Ustraa by happly unmarried Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/126721/ustraa-by-happily-unmarried-cologne-spray-base-camp-deodorant-spray-for-men-100-ml_9_display_1611567573_bff904f0.jpg",
+    rating: 5,
+    price: "₹599",
+},{
+    name:"Jovan Musk Pour Homme Cologe Spray For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/89670/jovan-musk-for-men-cologne-spray-88-ml_1_display_1479458032_171e2f47.jpg",
+    rating:5 ,
+    price: "₹699",
+},{
+    name:"Jovan Combo Of Black Musk Men's Perfume",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/148454/jovan-combo-of-black-musk-men-s-perfumes-edc-88-ml-with-deodorant-150-ml_1_display_1531915507_a655923d.jpg",
+    rating:4.6 ,
+    price: "₹829",
+},{
+    name:"4711 Ekw Eau de Cologne 400ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/238593/4711-ekw-eau-de-cologne-400ml_2_display_1626096555_26f34a5b.jpg",
+    rating:4.6 ,
+    price: "₹3315",
+},{
+    name:"Ustraa by happly unmarried Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/126721/ustraa-by-happily-unmarried-cologne-spray-base-camp-deodorant-spray-for-men-100-ml_9_display_1611567573_bff904f0.jpg",
+    rating: 5,
+    price: "₹599",
+},{
+    name:"Jovan White Musk For men Cologe Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/112128/jovan-white-musk-for-women-cologne-spray-96-ml_1_display_1484206412_2c02a18d.jpg",
+    rating: 4.3,
+    price: "₹699",
+},{
+    name:"Jovan Musk Pour Homme Cologe Spray For Men",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/89670/jovan-musk-for-men-cologne-spray-88-ml_1_display_1479458032_171e2f47.jpg",
+    rating:5 ,
+    price: "₹699",
+},{
+    name:"Jovan Black Musk For Men Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/150989/jovan-black-musk-for-men-cologne-spray-88-ml_1_display_1484206430_c031da6d.jpg",
+    rating:5.0 ,
+    price: "₹599",
+},{
+    name:"4711 Ekw Eau de Cologne 400ml",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/238593/4711-ekw-eau-de-cologne-400ml_2_display_1626096555_26f34a5b.jpg",
+    rating:4.6 ,
+    price: "₹3315",
+},{
+     name:"Jovan Black Musk For Men Cologne Spray",
+    image:"https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/150989/jovan-black-musk-for-men-cologne-spray-88-ml_1_display_1484206430_c031da6d.jpg",
+    rating:5.0 ,
+    price: "₹599",
+},
+];
+    const perfumes_json = JSON.stringify(colognes);
+
+    localStorage.setItem("women_perfume", perfumes_json);
+
+    let women_perfume = localStorage.getItem("women_perfume");
+women_perfume = JSON.parse(women_perfume);
+
+    function viewPerfumes() {
+        console.log(women_perfume);
+        let data = document.getElementById("data");
+
+ women_perfume.forEach(function (product) {
+           let div = document.createElement("div");
+           div.setAttribute("class", "myDIV")
+            let name = document.createElement("p");
+            name.innerText = product.name;
+            name.setAttribute("class", "txt")
+
+            let price = document.createElement("p");
+            price.innerText = product.price;
+            let image = document.createElement("img");
+            price.setAttribute("class", "prz")
+            image.src = product.image;
+
+            
+            let rating = document.createElement("p");
+            rating.innerText = product.rating;
+            rating.style.color = "red"
+            rating.style.float = "right"
+            rating.style.backgroundColor = "green"
+
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add to cart"
+            btn.style.width = "100%"
+            btn.style.height = "40px"
+            btn.style.backgroundColor = "#004d40"
+            btn.style.fontSize = "25px"
+            btn.style.cursor="pointer"
+            btn.setAttribute("class", "hide")
+            btn.onclick = function () {
+                addtoCard(product);
+            }
+            name.append(price)
+            price.append(rating)
+            div.append(image, btn, name);
+            data.append(div);
+        });
+    }
+viewPerfumes();
+    if (localStorage.getItem("card") === null) {
+        localStorage.setItem("card", JSON.stringify([]));
+    }
+
+
+   var cardtemp=[];
+    function addtoCard(p) {
+
+
+        let card_data = JSON.parse(localStorage.getItem("card"));
+        
+        for(key in card_data){
+            cardtemp.push(card_data[key].name);
+        }
+        if(cardtemp.indexOf(p.name)  != -1){
+            
+        }else{
+            card_data.push(p);
+        }
+        localStorage.setItem("card", JSON.stringify(card_data));
+
+    }
+    </script>

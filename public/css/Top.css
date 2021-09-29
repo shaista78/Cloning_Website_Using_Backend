@@ -1,0 +1,39 @@
+#top-box{
+	height: 60px;
+	box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.15);
+	display: flex;
+	margin-top: 0;
+	width: 100%;
+	padding: 10px 10px;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	justify-content: space-between;
+}
+
+body,html{
+	margin: 0;
+}
+
+#face{
+
+	color:gray;
+	margin-right: 20px;
+}
+
+#check{
+	color: gray;
+	margin-right: 20px;
+}
+
+#check:hover{
+	color:#F50057;
+}
+
+#face:hover{
+	color: #F50057;
+}
+
+#logo{
+margin-left: 20px;
+}
