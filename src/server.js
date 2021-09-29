@@ -10,7 +10,7 @@ app.get("/sign", (req, res) => {
 });
 
 app.get("", (req, res) => {
-    res.send('welcome to home page')
+    res.render('home')
 });
 
 
