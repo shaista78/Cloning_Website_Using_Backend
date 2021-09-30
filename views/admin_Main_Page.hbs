@@ -5,21 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Products</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .head{
+            width: 800px;
+            background-color: rgba(145, 145, 155);
+            margin: auto;
+            color: #fff;
+            padding: 10px 0px 10px 0px;
+            text-align: center;
+            border-radius: 15px 15px 0px 0px;
+        }
+        .main{
+            background-color: rgba(0,0,0,0.5);
+            width: 800px;
+            margin: auto;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+       a{
+           text-decoration: none;
+           font-family: sans-serif;
+           color: black;
+           padding-left: 30px;
+           padding-bottom: 15px;
+           padding-top: 15px;
+           color: #fff;
+       }
+
+       a:hover{
+           color:rgba(60, 12, 124, 0.5);
+       }
+
+        </style>
 
 </head>
 <body>
     <div>
+  <div class="head">
+    <h1>Fragrance for women</h1></div>
+    
+    <div class="main">
+    <a href="adminperfume.hbs">Pefumes</a>
+    <a href="admin.hbs">Deodrants and Roll-Ons</a>
+    <a href="adminMists.hbs">Body Mists and prays</a>
+    <a href="adminCreams.hbs">Perfumed creams and solid perfumes</a>
+    </div>
 
-    <a href="admin.hbs"><h1>Fragrance for women</h1></a>
-    <h2>Pefumes</h2>
-    <h2>Deodrants and Roll-Ons</h2>
-    <h2>Body Mists and prays</h2>
-    <h2>Perfumed creams and solid perfumes</h2>
+
+<div class="head">
+    <h1>Fragrance for men</h1>
+</div>
 
 
-    <h1>Fragrance for women</h1>
+ <div class="main">
+    <a href="adminperfume.hbs">Pefumes</a>
+    <a href="admin.hbs">Deodrants and Roll-Ons</a>
+    <a href="adminMists.hbs">Body Mists and prays</a>
+    <a href="adminCreams.hbs">Perfumed creams and solid perfumes</a>
+    </div>
 
     </div>
+    
     
 </body>
 </html>

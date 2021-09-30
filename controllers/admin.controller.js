@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.post("/",async(req,res)=>{
-   const product = await users.create(req.body);
+   const product = await admin.create(req.body);
     res.render('admin')
 });
 
