@@ -6,8 +6,16 @@ const connect = require('./configs/db');
 const register = require('./models/signup.models');
 
 
+/////////////////////
+const productscontroler = require("./controllers/products.controler")
+
+
+
+
+
 
 const product = require('./controllers/admin.controller');
+const adminMist = require('./controllers/adminMist.controller');
 
 
 //const Products = require('./models/admin');
@@ -38,6 +46,12 @@ app.get('/', (req,res)=>{
     res.render('home');
 });
 
+
+app.get('/adminMists.hbs',(req,res)=>{
+    res.render('adminMists');
+})
+
+app.use('/post-adminMist',adminMist)
  
 app.use("sign", register);
 
@@ -45,6 +59,8 @@ app.get('/signup', (req,res)=>{
     res.render('signup')
     
 });
+
+
 
 app.use('/post-product',product);
 
@@ -80,6 +96,17 @@ app.get('/signup.hbs', (req, res)=>{
  app.get('/admin.hbs', (req,res)=>{
      res.render('admin')
  })
+/////////////////
+ app.use("/perfume",productscontroler)
+
+ app.use("/perfume",productscontroler)
+
+
+
+
+
+
+
 
 
 app.post("/register", async (req, res) => {
@@ -111,8 +138,8 @@ app.get("/login", (req, res) => {
     res.render('login')
 });
 
-
-
+const cart = require("./controllers/card.controllers")
+app.use("/card.hbs",cart);
 //login partials
 
 app.post('/login', async (req, res) => {
