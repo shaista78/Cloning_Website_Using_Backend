@@ -7,17 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="form-control">
     <form method = "POST" action ="/post-product">
         <h1>Manage Products</h1>
         <label>Name:<input type="text"  name = "name" required/>
         <br/>
 
-        <label>Email:<input type="text"  name ="email" required/>
+        <label>Price:<input type="text"  name = "price" required/>
+        <br/>
+
+        <label>Rating:<input type="text"  name = "rating" required/>
+        <br/>
+
+        <label>Image:<input type="text"  name ="image" required/>
         <br>
 
         <input type="submit" value="submit"></input> 
         
 
         </form>
+
+
+        <h1>{{users.name}}</h1>
+        <h1>{{users.email}}</h1>
+    </div>
 </body>
 </html>

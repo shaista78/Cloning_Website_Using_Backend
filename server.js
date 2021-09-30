@@ -3,14 +3,14 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const connect = require('./configs/db');
-const register = require('./src/models/signup');
+const register = require('./models/signup.models');
 
 
 
 const product = require('./controllers/admin.controller');
 
 
-const Products = require('./models/admin');
+//const Products = require('./models/admin');
 
 const app = express();
 
@@ -48,34 +48,38 @@ app.get('/signup', (req,res)=>{
 
 app.use('/post-product',product);
 
+app.use('/admin',product)
 
 
-// 
+
+//app.use('/new',product);
 
 app.get('/signup.hbs', (req, res)=>{
     res.render('signup')
 })
-// app.get('/address.hbs', (req,res)=>{
-//     res.render('address')
-// })
+ app.get('/address.hbs', (req,res)=>{
+     res.render('address')
+ })
 
-// app.get('/AfterLogin.hbs', (req,res)=>{
-//     res.render('AfterLogin')
-// })
+ app.get('/AfterLogin.hbs', (req,res)=>{
+     res.render('AfterLogin')
+ })
 
-// app.get('/body_mist_women.hbs',(req,res)=>{
-//     res.render('body_mist_women')
-// })
+ app.get('/body_mist_women.hbs',(req,res)=>{
+     res.render('body_mist_women')
+ })
 
-// app.get('/card.hbs',(req,res)=>{
-//     res.render('card');
-// })
+ app.get('/admin_Main_Page.hbs',(req,res)=>{
+     res.render('admin_Main_Page');
+ })
 
-// app.post('/register', register)
 
-// app.get('/admin', (req,res)=>{
-//     res.render('admin')
-// })
+
+ 
+
+ app.get('/admin.hbs', (req,res)=>{
+     res.render('admin')
+ })
 
 
 app.post("/register", async (req, res) => {
@@ -84,7 +88,8 @@ app.post("/register", async (req, res) => {
         const mobile = req.body.mobile;
         const password = req.body.password;
 
-
+         console.log(mobile);
+         console.log(password);
 
         if (mobile.length === 10 && password.length >= 8) {
             const done = new register({
@@ -107,6 +112,8 @@ app.get("/login", (req, res) => {
     res.render('login')
 });
 
+
+
 //login partials
 
 app.post('/login', async (req, res) => {
@@ -121,7 +128,7 @@ app.post('/login', async (req, res) => {
             res.send("wrong")
         }
         // res.send("user not found!")
-
+      
 
     } catch (err) {
         res.status(400).send("user not found!");
