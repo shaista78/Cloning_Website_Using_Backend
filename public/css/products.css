@@ -1,0 +1,51 @@
+#data {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 5%;
+    align-items: center;
+}
+
+ #data div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#btn{
+    display: block;
+}
+
+      .txt {
+    height: 42px;
+    color: #566770;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    line-height: 21px;
+}
+
+.prz {
+    font-size: 17px;
+    line-height: 0px;
+
+}
+
+.hide {
+    display: none;
+}
+
+.myDIV:hover .hide {
+    display: block;
+    color: rgb(241, 234, 234);
+}
+ h1{
+    text-align: center;
+    font-size: 50px;
+}
+  #banner{
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+
+}

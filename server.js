@@ -6,6 +6,13 @@ const connect = require('./configs/db');
 const register = require('./models/signup.models');
 
 
+/////////////////////
+const productscontroler = require("./controllers/products.controler")
+
+
+
+
+
 
 const product = require('./controllers/admin.controller');
 
@@ -80,6 +87,17 @@ app.get('/signup.hbs', (req, res)=>{
  app.get('/admin.hbs', (req,res)=>{
      res.render('admin')
  })
+/////////////////
+ app.use("/perfume",productscontroler)
+
+ app.use("/perfume",productscontroler)
+
+
+
+
+
+
+
 
 
 app.post("/register", async (req, res) => {
