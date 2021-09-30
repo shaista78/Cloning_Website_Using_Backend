@@ -88,8 +88,7 @@ app.post("/register", async (req, res) => {
         const mobile = req.body.mobile;
         const password = req.body.password;
 
-         console.log(mobile);
-         console.log(password);
+         
 
         if (mobile.length === 10 && password.length >= 8) {
             const done = new register({
