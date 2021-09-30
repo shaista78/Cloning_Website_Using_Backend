@@ -139,8 +139,16 @@ app.get("/login", (req, res) => {
     res.render('login')
 });
 
+
+
 const cart = require("./controllers/card.controllers")
 app.use("/card.hbs",cart);
+
+const mist = require("./controllers/body_mist_women.controller")
+app.use("/bodymistwomen",mist)
+
+
+
 //login partials
 
 app.post('/login', async (req, res) => {
