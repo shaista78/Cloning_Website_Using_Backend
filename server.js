@@ -8,6 +8,7 @@ const register = require('./models/signup.models');
 
 
 const product = require('./controllers/admin.controller');
+const adminMist = require('./controllers/adminMist.controller');
 
 
 //const Products = require('./models/admin');
@@ -38,6 +39,12 @@ app.get('/', (req,res)=>{
     res.render('home');
 });
 
+
+app.get('/adminMists.hbs',(req,res)=>{
+    res.render('adminMists');
+})
+
+app.use('/post-adminMist',adminMist)
  
 app.use("sign", register);
 
@@ -45,6 +52,8 @@ app.get('/signup', (req,res)=>{
     res.render('signup')
     
 });
+
+
 
 app.use('/post-product',product);
 
