@@ -1,0 +1,127 @@
+
+        #data {
+            display: grid;
+            grid-template-columns: 60%;
+           grid-gap: 1%;
+           
+        }
+  #data div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+             box-shadow: 0 0 40px 20px rgba(223, 86, 170, 0.2);
+             margin-left: 320px;
+             border-radius: 15px;
+             height: 220px;
+             padding: 10px;
+        }
+        #data div img{
+            width: 33%;
+            height: 60%;
+        }
+            .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+            float: left;
+            width: 85%;
+        }
+       
+       
+#top{
+    box-shadow: 0 0 40px 20px rgba(240, 7, 170, 0.15);
+	
+    float: right;
+            
+      border-radius: 5px;
+        font-size: 20px;
+        margin-top:30px;
+        padding: 12px;
+        width: 430px;
+        height: 380px;
+        margin-right: 290px;
+        position: sticky;
+        top: 200px;
+        bottom: 100px;
+        background-color: white;
+        
+}
+#top button{
+    
+    width: 420px;
+    height: 40px;
+    background-color: rgb(212, 20, 180);
+}
+ h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        #top button a {
+            text-decoration: none;
+            font-size: 20px;
+            color: wheat;
+        }
+      #mrp{
+    margin-left: 62%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+#mini{
+    /* margin-top: 100px; 
+    width: 30%;*/
+  /* border: 1px solid yellow; 
+    float:right;*/
+   margin-right: 5%;
+   color: #90A4AE;
+
+ 
+}
+h3{
+    color: black;
+    font-size: 20px;
+}
+
+#smallBox > div {
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+   
+}
+.mrp{
+
+    margin-left: 50%;
+}
+.ship{
+    margin-right: 50%;
+}
+.dis{
+    margin-left: 50%;
+}
+#help{
+    border: 1px solid #CFD8DC;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+  color: #90A4AE;
+}
+#top-box{
+	height: 60px;
+	box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.15);
+	display: flex;
+	margin-top: 0;
+	width: 100%;
+	padding: 10px 10px;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	justify-content: space-between;
+}
+.f{
+    float: right;
+}
