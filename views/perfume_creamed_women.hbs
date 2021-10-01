@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes</title>
+    <title> {{title}}</title>
     <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Top.css">
 
@@ -51,6 +51,14 @@
             text-align: center;
             font-size: 50px;
         }
+         .btn{
+            width: 100%;
+            height: 40px;
+            background-color: #004d40;
+            cursor: pointer;
+            font-size: 20px;
+            display:none ;
+        }
     </style>
 </head>
 
@@ -72,85 +80,19 @@
         </div>
  <h1>Perfumed Creams & Solid Perfumes</h1>
 
-    <div id="data"></div>
+    <div id="data">
+        	{{#each userlist}} 
+    <div class="myDIV">
+
+        <img src={{image}} alt="">
+		<p class="txt">{{name}} <br> ₹{{price}}</p>
+       <p class="f txt"> ★{{rating}}</p>
+		<button class="btn hide">Add to cart</button>
+	
+    </div>
+    {{/each}}
+    
+    </div>
 </body>
 
 </html>
-<script>
-
-    //Fragrance for women
-  
-    const perfumes_json = JSON.stringify(perfumed_creamed);
-
-    localStorage.setItem("women_perfume", perfumes_json);
-
-    let women_perfume = localStorage.getItem("women_perfume");
-    women_perfume = JSON.parse(women_perfume);
-
-    function viewPerfumes() {
-        console.log(women_perfume);
-        let data = document.getElementById("data");
-
-        women_perfume.forEach(function (product) {
-            let div = document.createElement("div");
-            div.setAttribute("class", "myDIV")
-            let name = document.createElement("p");
-            name.innerText = product.name;
-            name.setAttribute("class", "txt")
-
-            let price = document.createElement("p");
-            price.innerText = product.price;
-            let image = document.createElement("img");
-            price.setAttribute("class", "prz")
-            image.src = product.image;
-
-            
-            let rating = document.createElement("p");
-            rating.innerText = product.rating;
-            rating.style.color = "red"
-            rating.style.float = "right"
-            rating.style.backgroundColor = "green"
-
-
-            let btn = document.createElement("button");
-            btn.innerText = "Add to cart"
-            btn.style.width = "100%"
-            btn.style.height = "40px"
-            btn.style.backgroundColor = "#004d40"
-            btn.style.fontSize = "25px"
-            btn.style.cursor="pointer"
-            btn.setAttribute("class", "hide")
-            btn.onclick = function () {
-                addtoCard(product);
-            }
-            name.append(price)
-            price.append(rating)
-            div.append(image, btn, name);
-            data.append(div);
-        });
-    }
-
-    viewPerfumes();
-    if (localStorage.getItem("card") === null) {
-        localStorage.setItem("card", JSON.stringify([]));
-    }
-
-
-    var cardtemp = [];
-    function addtoCard(p) {
-
-
-        let card_data = JSON.parse(localStorage.getItem("card"));
-
-        for (key in card_data) {
-            cardtemp.push(card_data[key].name);
-        }
-        if (cardtemp.indexOf(p.name) != -1) {
-            
-        } else {
-            card_data.push(p);
-        }
-        localStorage.setItem("card", JSON.stringify(card_data));
-
-    }
-</script>

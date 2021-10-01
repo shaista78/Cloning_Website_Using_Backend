@@ -10,6 +10,5 @@ const productsSchema = new mongoose.Schema({
     timestamps:true
 });
 
-
-const Products = mongoose.model('Mist',productsSchema)
-module.exports = Products;
+const creams = mongoose.model("creams",productsSchema)
+module.exports = creams;

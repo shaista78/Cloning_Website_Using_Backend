@@ -117,9 +117,26 @@ app.get("/login", (req, res) => {
     res.render('login')
 });
 
+
+//prouduct pages
+
 const cart = require("./controllers/card.controllers")
 app.use("/card.hbs",cart);
-//login partials
+
+const mist = require("./controllers/body_mist_women.controller")
+app.use("/bodymistwomen",mist)
+
+const deodrants = require("./controllers/deodrants.controllers")
+app.use("/deodrants",deodrants)
+
+
+const creams = require("./controllers/creams.controller")
+app.use("/creams",creams)
+
+//address page
+const address = require("./controllers/address.controllers")
+app.use("/address", address)
+
 
 
 
