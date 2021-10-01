@@ -3,7 +3,8 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const connect = require('./configs/db');
-const register = require('./models/signup.models');
+const register = require('./controllers/signup.controller');
+const log = require('./controllers/login.controler')
 
 
 /////////////////////
@@ -47,13 +48,19 @@ app.get('/', (req,res)=>{
 });
 
 
+//Signup && login
+app.use('/', register);
+
+app.use('/', log);
+
+
 app.get('/adminMists.hbs',(req,res)=>{
     res.render('adminMists');
 })
 
 app.use('/post-adminMist',adminMist)
  
-app.use("sign", register);
+// app.use("sign", register);
 
 app.get('/signup', (req,res)=>{
     res.render('signup')
@@ -65,7 +72,6 @@ app.get('/signup', (req,res)=>{
 app.use('/post-product',product);
 
 app.use('/admin',product)
-
 
 
 //app.use('/new',product);
@@ -109,30 +115,8 @@ app.get('/signup.hbs', (req, res)=>{
 
 
 
-app.post("/register", async (req, res) => {
-    try {
-       
-        const mobile = req.body.mobile;
-        const password = req.body.password;
 
-         
 
-        if (mobile.length === 10 && password.length >= 8) {
-            const done = new register({
-                mobile: req.body.mobile,
-                password: req.body.password
-            });
-
-            const registerd = await done.save();
-            res.status(200).render("login")
-        } else {
-            res.send("please enter valid things")
-        }
-
-    } catch (err) {
-        res.status(500).send(err);
-    }
-})
 
 app.get("/login", (req, res) => {
     res.render('login')
@@ -141,25 +125,6 @@ app.get("/login", (req, res) => {
 const cart = require("./controllers/card.controllers")
 app.use("/card.hbs",cart);
 //login partials
-
-app.post('/login', async (req, res) => {
-    try {
-        const det = req.body.ida;
-        const cred = req.body.cred;
-        
-        const userdetails = await register.findOne({ mobile: det });
-        if (userdetails.password === cred) {
-            res.render('AfterLogin')
-        } else {
-            res.send("wrong")
-        }
-        // res.send("user not found!")
-      
-
-    } catch (err) {
-        res.status(400).send("user not found!");
-    }
-})
 
 
 
