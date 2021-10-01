@@ -9,45 +9,30 @@ const router = express.Router();
 
 
 router.post("/register",async(req,res)=>{
-
-   
-     const mobile = req.body.mobile;
+try{
+    const mobile = req.body.mobile;
      const password = req.body.password;
  
  
      if (mobile.length === 10 && password.length >= 8) {
          const product = await register.create(req.body);
-         res.render('login')
+         res.render('signup', {msg: 'success'})
+         
  
      
   }else{
       res.send("please enter valid")
   }
+} catch (err){
+    res.render('login', {title: 'Mobile is already exists*, Login'})
+}
+   
+     
     
  
  }
  
  );
  
-
-// router.post('/login', async (req, res) => {
-//     try {
-//         const det = req.body.ida;
-//         const cred = req.body.cred;
-        
-//         const userdetails = await register.findOne({ mobile: det });
-//         if (userdetails.password === cred) {
-//             res.render('home')
-//         } else {
-//             res.send("wrong")
-//         }
-//         // res.send("user not found!")
-
-
-//     } catch (err) {
-//         res.status(400).send("user not found!");
-//     }
-// })
-
-
+ 
 module.exports = router;

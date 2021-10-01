@@ -16,6 +16,9 @@
     margin-top: 10px;
 }
 
+#alert{
+    color: red;
+}
     </style>
 
 </head>
@@ -45,8 +48,11 @@
         <p id="mess1"></p>
         
         <input id="pas" type="password" placeholder="Enter your Password" name="cred" >
+        <br/>
+        <div id="alert"> {{{title}}}</div>
+       
         <p id="wr"></p>
-        <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Create/Login</button>
+        <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Login</button>
         <p id="check"></p>
          <p  id="connect" >or connect with </p>
       

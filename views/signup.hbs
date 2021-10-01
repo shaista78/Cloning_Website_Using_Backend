@@ -15,6 +15,9 @@
     margin-left: 45%;
     margin-top: 10px;
 }
+a{
+    text-decoration: none;
+}
 
       </style>
   
@@ -46,9 +49,13 @@
         <p id="mess1"></p>
         
         <input id="pas" type="password" placeholder="Enter your Password" name="password" >
+        <br/>
         {{{title}}}
+        {{{msg}}}
+        <br/>
+        <a href="login">click here to login</a>
         <p id="wr"></p>
-        <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Create/Login</button>
+        <button onclick="store()" onmouseover="hol()" onmouseout="fun()" id="btn">Create</button>
         <p id="check"></p>
          <p  id="connect" >or connect with </p>
       
