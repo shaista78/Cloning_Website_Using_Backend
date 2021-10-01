@@ -6,14 +6,8 @@ const connect = require('./configs/db');
 const register = require('./controllers/signup.controller');
 const log = require('./controllers/login.controler')
 
-
 /////////////////////
 const productscontroler = require("./controllers/products.controler")
-
-
-
-
-
 
 const product = require('./controllers/admin.controller');
 const adminMist = require('./controllers/adminMist.controller');
@@ -49,6 +43,7 @@ app.get('/', (req,res)=>{
 
 
 //Signup && login
+
 app.use('/', register);
 
 app.use('/', log);
@@ -76,16 +71,16 @@ app.use('/admin',product)
 
 //app.use('/new',product);
 
-app.get('/signup.hbs', (req, res)=>{
-    res.render('signup')
-})
- app.get('/address.hbs', (req,res)=>{
-     res.render('address')
- })
+// app.get('/signup.hbs', (req, res)=>{
+//     res.render('signup')
+// })
+//  app.get('/address.hbs', (req,res)=>{
+//      res.render('address')
+//  })
 
- app.get('/AfterLogin.hbs', (req,res)=>{
-     res.render('AfterLogin')
- })
+//  app.get('/AfterLogin.hbs', (req,res)=>{
+//      res.render('AfterLogin')
+//  })
 
  app.get('/body_mist_women.hbs',(req,res)=>{
      res.render('body_mist_women')

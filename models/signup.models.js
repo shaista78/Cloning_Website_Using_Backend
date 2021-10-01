@@ -5,12 +5,12 @@ const mongoose = require('mongoose');
 
 
 const productsSchema = new mongoose.Schema({
-    mobile :{type:Number,required:true},
+    mobile :{type:String,required:true, unique:true, index:true, trim:true, autoIndex:true},
     password :{type:String,required:true},
   
     
 }, {
-versionKey: false,
+//versionKey: false,
 timestamps: true});
 
 

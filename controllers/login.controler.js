@@ -11,7 +11,7 @@ router.post('/login', async (req, res) => {
         if (userdetails.password === cred) {
             res.render('AfterLogin')
         } else {
-            res.send("wrong")
+           res.render('signup', {title: 'Wrong password'})
         }
         // res.send("user not found!")
 
