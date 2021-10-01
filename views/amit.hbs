@@ -3,45 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>women perfume</title>
+    <script src="https://kit.fontawesome.com/c4e502dbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Top.css">
 
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/products.css">
     <style>
-        {{!-- #product > div{
-
-            
-        } --}}
-
-
-
-        #product{
+      #data {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            align-items: center;
+        }
+        
+         #data div {
             display: flex;
-         }
+            flex-direction: column;
+            align-items: center;
+        }
+       
+         
+              .txt {
+            height: 42px;
+            color: #566770;
+            font-size: 16px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+            line-height: 21px;
+        }
 
-    img{
-        width: 300px;
-    }
+        .prz {
+            font-size: 17px;
+            line-height: 0px;
 
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover .hide {
+            display: block;
+            color: rgb(241, 234, 234);
+            cursor: -webkit-grab;
+             cursor: grab;
+
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        #banner{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+margin-top: 100px;
+	
+}
+      .btn{
+            width: 100%;
+            height: 40px;
+            background-color: #004d40;
+            cursor: pointer;
+            font-size: 20px;
+        }
 
     </style>
-
-
 </head>
 <body>
-    
-    <div id="product">
-	
-		{{#each userlist}}
-		<div>{{name}}&nbsp;({{price}})<br>{{rating}}<br>
 
 
-      <img src="{{image}}" alt="">
+    <div id="top-box">
+    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+            <div class="basket-icons"> 
+<a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+
+                 <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
+
+
+            </div>
+            
         </div>
-        
-		{{/each}}
-	<button >add tto card</button>
-</div>
+        <div id="banner">
+		<a href="#"><img id="banner"
+				src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1630062981_web_-without-cta.gif?tr=f-gif" /></a>
+	</div>
+         <h1>Perfumes</h1>
+        <div id="data">
+    	{{#each userlist}} 
+    <div class="myDIV">
 
+        <img src={{image}} alt="">
+		<p class="txt">{{name}} <br> ₹{{price}}</p>
+       <p class="f txt"> ★{{rating}}</p>
+		<button class="btn hide">Add to cart</button>
+	
+    </div>
+    {{/each}}
+    
+    </div>
 </body>
 </html>
