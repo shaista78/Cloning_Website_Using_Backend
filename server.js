@@ -49,9 +49,9 @@ app.use('/', register);
 app.use('/', log);
 
 
-app.get('/adminMists.hbs',(req,res)=>{
-    res.render('adminMists');
-})
+
+app.use('/body_mist_women.hbs', adminMist);
+
 
 app.use('/post-adminMist',adminMist)
  
