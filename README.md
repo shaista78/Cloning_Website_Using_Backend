@@ -25,7 +25,7 @@ This website's objective is to sell beauty cosmetic products online. We cloned t
 
 
 ## How to Use:
-- By Visiting the link https://github.com/shaista78/purpel_web_clone.git clone it to local host.
+- By Visiting the link https://github.com/shaista78/Cloning_Website_Using_Backend clone it to local host.
 - By opening the Home.html file in any browser you are able to see the working of this website.
 
 
