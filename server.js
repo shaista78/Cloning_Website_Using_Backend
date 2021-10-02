@@ -111,7 +111,9 @@ app.use('/admin',product)
 
 
 
-
+app.get('/signup.hbs', (req, res) => {
+    res.render('signup')
+})
 
 app.get("/login", (req, res) => {
     res.render('login')
