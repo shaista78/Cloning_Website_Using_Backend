@@ -144,6 +144,10 @@ app.use("/creams",creams)
 const address = require("./controllers/address.controllers")
 app.use("/address", address)
 
+//checkout page
+const checkout = require("./controllers/check.controllers")
+app.use("/checkout", checkout)
+
 
 
 

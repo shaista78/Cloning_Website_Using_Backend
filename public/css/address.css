@@ -114,6 +114,11 @@ h3{
        border: 0px solid #e02378;
        cursor: pointer;
    }
+   #continue a{
+       color: white;
+       text-decoration: none;
+       font-size: 15px;
+   }
    #continue > p{
        margin: auto;
        padding-top: 6px;

@@ -5,14 +5,23 @@ const mongoose = require('mongoose');
 
 
 const productsSchema = new mongoose.Schema({
-    mobile :{type:Number,required:true},
-    password :{type:String,required:true},
+    name:{type:String, required:true},
+    pincode:{type:Number,required:true},
+    address:{type:String,required:true},
+    landmark:{type:String, required:true},
+    city:{type:String,required:true},
+    state:{type:String,required:true},
+    mobile:{type:String,required:true}
+  
   
     
 }, {
-versionKey: false,
+
 timestamps: true});
 
 
 const Products = mongoose.model('address',productsSchema)
 module.exports = Products;
+
+
+
