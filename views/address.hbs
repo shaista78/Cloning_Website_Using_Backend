@@ -35,16 +35,16 @@
                             </select>
                             <div id="Jeet">
                                 <label>Name:</label>
-                                <input id="nam" type="text" required name="name" />
+                                <input id="nam" type="text"  name="name" required/>
                             </div>
                         </div>
                         <div>
                             <label>Pincode*</label>
-                            <input id="pin" type="number" required name="pincode" />
+                            <input id="pin" type="number"  name="pincode" required/>
                         </div>
                         <div>
                             <label>Address*</label>
-                            <input id="division" type="text" required name="address" />
+                            <input id="division" type="text"  name="address" required/>
                         </div>
                         <div>
                             <label>Landmark:</label>
@@ -53,16 +53,16 @@
                         <div id="cit_stat">
                             <div>
                                 <label>city:</label>
-                                <input id="cit" type="text" required name="city" />
+                                <input id="cit" type="text"  name="city" required/>
                             </div>
                             <div>
                                 <label id="stat">State:</label>
-                                <input id="sta" type="text" required name="state"/>
+                                <input id="sta" type="text"  name="state" required/>
                             </div>
                         </div>
                         <div>
                             <label>Mobile*</label>
-                            <input id="phone" type="number" required name="mobile"/>
+                            <input id="phone" type="number"  name="mobile" required/>
                         </div>
 
                 </div>
@@ -104,7 +104,7 @@
             <p>arrive early or later then planned</p>
             <div id="warn"></div>
             <div id="continue">
-                <button onclick="addAddress()" type="submit" id="continue" ><a href="/checkout/add">SAVE AND CONTINUE</a></button>
+                <button onclick="check()" type="submit" id="continue" >SAVE AND CONTINUE</button>
              </div>
        
             <br>
@@ -115,4 +115,23 @@
 </body>
 
 </html>
+
+<script>function check() {
+        var nam = document.getElementById("nam").value;
+    var code = document.getElementById("pin").value;
+    var stre = document.getElementById("division").value;
+    var cit = document.getElementById("cit").value;
+    var st = document.getElementById("sta").value;
+    var mobi = document.getElementById("phone").value;
+
+
+    if((code.length ==6) && (stre.length > 0) && (nam.length > 0) &&  (cit.length > 0) && (st.length > 0) && (cit.length > 0) && (mobi.length == 10)){
+    console.log("yes");
+    window.location.href="checkout.hbs";
+
+} else{
+   let warni = document.getElementById("warn");
+   warni.innerHTML = "Please fill required fields*"
+}
+    }</script>
 

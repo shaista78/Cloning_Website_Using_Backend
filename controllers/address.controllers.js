@@ -30,7 +30,7 @@ router.get("/",async(req,res)=>{
 router.post("/",async(req,res) => {
     const add = await address.create(req.body);
 
-    return res.status(200).send({add});
+    // return res.status(200);
 
     // const address = await address({Name: req.body.name,pinecode:req.body.pinecode,Address:req.body.add,Landmark:req.body.Landmark,city:req.body.city,state:req.body.state,Mobile:req.body.mobile})
     //  address.save(function(err) {
