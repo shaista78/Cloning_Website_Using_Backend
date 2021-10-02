@@ -106,7 +106,7 @@ app.use('/admin',product)
 /////////////////
  app.use("/perfume",productscontroler)
 
- app.use("/perfume",productscontroler)
+
 
 
 
