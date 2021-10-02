@@ -24,7 +24,7 @@ router.get("/add", async(req, res) => {
     product.forEach(data =>{
          total = total + data.price;
     })
-    
+    console.log(total)
 
   res.render("checkout.hbs",{check:check,tot:total})
   });
