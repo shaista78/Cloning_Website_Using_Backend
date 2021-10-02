@@ -10,5 +10,10 @@ router.post("/",async(req,res)=>{
     res.render('adminMists')
 });
 
+router.get("/",async(req,res)=>{
+    const user = await admin.find({}).lean().exec();
+    res.render('body_mist_women',{userlist : user})
+    //return res.status(201).send({user});
+})
 
 module.exports = router;

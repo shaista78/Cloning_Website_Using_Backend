@@ -21,7 +21,7 @@ router.post("/",async(req,res)=>{
 
 router.get("/",async(req,res)=>{
     const user = await User.find({}).lean().exec();
-    res.render('amit',{userlist : user})
+    res.render('perfumes',{userlist : user})
     //return res.status(201).send({user});
 })
 
