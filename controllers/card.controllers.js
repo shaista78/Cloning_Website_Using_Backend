@@ -2,10 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-const Cart = require("../models/card.models.js");
+const Card = require("../models/card.models.js");
 
 router.post("",async(req,res) =>{
-   const cart = await Cart.create(req.body);
+   const cart = await Card.create(req.body);
 
      return res.status(200).send({cart});
  })
@@ -13,7 +13,7 @@ router.post("",async(req,res) =>{
 
 router.get("", async(req, res) => {
    
-  var card= await Cart.find({}).lean().exec()
+  var card= await Card.find({}).lean().exec()
 
   res.render("card.hbs",{card:card})
   });

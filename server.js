@@ -4,7 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const connect = require('./configs/db');
 const register = require('./controllers/signup.controller');
-const log = require('./controllers/login.controler')
+const log = require('./controllers/login.controler');
+
+const cartt = require('./controllers/cartt.controller')
 
 /////////////////////
 const productscontroler = require("./controllers/products.controler")
@@ -42,6 +44,8 @@ app.get('/', (req,res)=>{
 });
 
 
+app.use('/cartt',cartt)
+
 //Signup && login
 
 app.use('/', register);
@@ -78,13 +82,13 @@ app.use('/admin',product)
 //      res.render('address')
 //  })
 
-//  app.get('/AfterLogin.hbs', (req,res)=>{
-//      res.render('AfterLogin')
-//  })
+  app.get('/AfterLogin.hbs', (req,res)=>{
+      res.render('AfterLogin')
+  })
 
- app.get('/body_mist_women.hbs',(req,res)=>{
-     res.render('body_mist_women')
- })
+ //app.get('/body_mist_women.hbs',(req,res)=>{
+   //  res.render('body_mist_women')
+ //})
 
  app.get('/admin_Main_Page.hbs',(req,res)=>{
      res.render('admin_Main_Page');
@@ -105,7 +109,10 @@ app.use('/admin',product)
 
 
 
+//cart 
 
+const cars = require('./controllers/Cart.controller');
+app.use('',cars);
 
 
 
