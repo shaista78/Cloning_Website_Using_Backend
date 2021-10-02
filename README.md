@@ -20,11 +20,11 @@ This website's objective is to sell beauty cosmetic products online. We cloned t
 ## Technologies Used:
 - HTML
 - CSS
-- Javascript
+- Node Js
 
 ## Packages Used:
 - Npm
-- Handlers
+- Handlbars(hbs)
 - Body-parser
 - Mongoose
 - Express
