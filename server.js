@@ -52,7 +52,9 @@ app.use('/', register);
 
 app.use('/', log);
 
-
+app.get('/cart.hbs', (req,res)=>{
+    res.render('cart');
+});
 
 app.use('/body_mist_women.hbs', adminMist);
 
@@ -129,8 +131,8 @@ app.get("/login", (req, res) => {
 
 //prouduct pages
 
-const cart = require("./controllers/card.controllers")
-app.use("/card.hbs",cart);
+// const cart = require("./controllers/card.controllers")
+// app.use("/card.hbs",cart);
 
 const mist = require("./controllers/body_mist_women.controller")
 app.use("/bodymistwomen",mist)
@@ -150,7 +152,9 @@ app.use("/address", address)
 const checkout = require("./controllers/check.controllers")
 app.use("/checkout", checkout)
 
-
+app.get('/address.hbs',(req,res)=>{
+    res.render('address')
+})
 
 
 //sub categories 2
