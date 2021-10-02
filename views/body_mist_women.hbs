@@ -68,10 +68,10 @@
 
 
      <div id="top-box">
-    <div><a href="AfterLogin.html"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
+    <div><a href="AfterLogin.hbs"><img id="logo" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"/></a></div>
             <div class="basket-icons"> 
 
-               <a href="card.html"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
+               <a href="card.hbs"><i class="fas fa-cart-plus fa-3x" id="check"></i></i></a>
 
                  <a href="address.html"><i class="fas fa-address-card fa-3x" id="face"></i></a>
 
@@ -87,7 +87,7 @@
         <img src={{image}} alt="">
 		<p class="txt">{{name}} <br> ₹{{price}}</p>
        <p class="f txt"> ★{{rating}}</p>
-		<button class="btn hide">Add to cart</button>
+		<a href = "/add-to-cart/{{this._id}}" class="btn hide">Add to cart</a>
 	
     </div>
     {{/each}}

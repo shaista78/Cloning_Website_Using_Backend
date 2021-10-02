@@ -26,7 +26,7 @@
             <div id="Address">
                 <div id="T_bar">
                     <h2>Add New Address</h2>
-                    <form action="checkout.hbs" method="POST" id="Add_form">
+                    <form action="address" method="POST" id="Add_form">
                         <div id="manage">
                             <select>
                                 <option value="Mr">Mr</option>
@@ -35,34 +35,34 @@
                             </select>
                             <div id="Jeet">
                                 <label>Name:</label>
-                                <input id="nam" type="text" required />
+                                <input id="nam" type="text" required name="name" />
                             </div>
                         </div>
                         <div>
                             <label>Pincode*</label>
-                            <input id="pin" type="number" required />
+                            <input id="pin" type="number" required name="pincode" />
                         </div>
                         <div>
                             <label>Address*</label>
-                            <input id="division" type="text" required />
+                            <input id="division" type="text" required name="address" />
                         </div>
                         <div>
                             <label>Landmark:</label>
-                            <input type="text" required />
+                            <input type="text" required name="landmark"/>
                         </div>
                         <div id="cit_stat">
                             <div>
                                 <label>city:</label>
-                                <input id="cit" type="text" required />
+                                <input id="cit" type="text" required name="city" />
                             </div>
                             <div>
                                 <label id="stat">State:</label>
-                                <input id="sta" type="text" required />
+                                <input id="sta" type="text" required name="state"/>
                             </div>
                         </div>
                         <div>
                             <label>Mobile*</label>
-                            <input id="phone" type="number" required />
+                            <input id="phone" type="number" required name="mobile"/>
                         </div>
 
                 </div>
@@ -104,99 +104,15 @@
             <p>arrive early or later then planned</p>
             <div id="warn"></div>
             <div id="continue">
-                <button onclick="addAddress()" type="submit" id="continue">SAVE AND CONTINUE</button>
+                <button onclick="addAddress()" type="submit" id="continue" ><a href="/checkout/add">SAVE AND CONTINUE</a></button>
              </div>
-            </form>
+       
             <br>
             <br>
 
         </div>
-
+    </form>
 </body>
 
 </html>
 
-<script>
-
-
-
-
-    var address = [];
-    var localstorageitem = localStorage.getItem("address");
-    if (localstorageitem !== null) {
-        address = JSON.parse(localstorageitem);
-    }
-    function addAddress() {
-        check();
-        var nam = document.getElementById("nam").value;
-        var code = document.getElementById("pin").value;
-        var stre = document.getElementById("division").value;
-        var cit = document.getElementById("cit").value;
-        var st = document.getElementById("sta").value;
-        var mobi = document.getElementById("phone").value;
-
-
-
-        var objpro = {
-            name: nam,
-            street: stre,
-            city: cit,
-            state: st,
-            pincode: code,
-            mobile: mobi,
-
-        }
-        address.push(objpro);
-        localStorage.setItem("address", JSON.stringify(address));
-
-    };
-
-
-    let card_data = JSON.parse(localStorage.getItem("card"));
-    console.log("card_data:", card_data);
-
-    var total = 0;
-    var totalitem = 0;
-
-    card_data.forEach(function (product) {
-        var out = product.price;
-        var x = out.replace("₹", "0")
-        total = total + Number(x);
-
-        totalitem = totalitem + Number(1);
-    });
-
-    console.log(total);
-    var total_h1 = document.getElementById("mrp");
-
-
-    if (total_h1) {
-
-        total_h1.innerHTML = "₹" + total;
-
-    }
-    // var totalitems = document.getElementById("totalitem");
-
-    // totalitems.innerText = `Total Items  - ${(totalitem)}`
-
-    function check() {
-        var nam = document.getElementById("nam").value;
-        var code = document.getElementById("pin").value;
-        var stre = document.getElementById("division").value;
-        var cit = document.getElementById("cit").value;
-        var st = document.getElementById("sta").value;
-        var mobi = document.getElementById("phone").value;
-
-
-        if ((code.length == 6) && (stre.length > 0) && (nam.length > 0) && (cit.length > 0) && (st.length > 0) && (cit.length > 0) && (mobi.length == 10)) {
-            console.log("yes");
-            window.location.href = "checkout.html";
-
-        } else {
-            let warni = document.getElementById("warn");
-            warni.innerHTML = "Please fill required fields*"
-        }
-    }
-
-
-</script>
