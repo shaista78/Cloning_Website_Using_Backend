@@ -61,6 +61,13 @@ app.get('/checkout.hbs', (req,res)=>{
 });
 
 
+app.get('/Order.hbs', (req,res)=>{
+    res.render('Order');
+});
+
+
+
+
 app.use('/body_mist_women.hbs', adminMist);
 
 
