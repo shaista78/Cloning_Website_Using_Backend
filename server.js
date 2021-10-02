@@ -175,6 +175,10 @@ app.get('/colognes.hbs',(req,res)=>{
     res.render('colognes')
 })
 
+app.get('/Order', (req,res)=>{
+    res.render('Order')
+})
+
 app.get('/deodarants_men.hbs',(req,res)=>{
     res.render('deodarants_men')
 })
