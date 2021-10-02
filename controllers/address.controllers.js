@@ -28,4 +28,34 @@ router.post("/",async(req,res) => {
     //  });
 })
 
+
+
+
+
+
+
+
+
+
+
+const car = require('../models/newCart.model');
+
+const mist = require('../models/adminMist');
+
+
+router.get('/',async(req,res)=>{
+
+    const product = await car.find({}).lean().exec();
+    var total =0;
+    product.forEach(data =>{
+         total = total + data.price;
+    })
+  
+    
+    res.render('address',{item :product,tot:total})
+})
+
+module.exports = router;
+
+
 module.exports=router;
