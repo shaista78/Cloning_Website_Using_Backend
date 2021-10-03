@@ -26,7 +26,9 @@
             <div id="Address">
                 <div id="T_bar">
                     <h2>Add New Address</h2>
-                    <form action="address" method="POST" id="Add_form">
+                    {{!-- <form  method="POST" id="Add_form"> --}}
+                        <form id="Add_form" action="checkout/add" method="GET">
+                    
                         <div id="manage">
                             <select>
                                 <option value="Mr">Mr</option>
@@ -111,12 +113,13 @@
             <br>
 
         </div>
+     
     </form>
 </body>
 
 </html>
 
-<script>function check() {
+{{!-- <script>function check() {
         var nam = document.getElementById("nam").value;
     var code = document.getElementById("pin").value;
     var stre = document.getElementById("division").value;
@@ -126,12 +129,12 @@
 
 
     if((code.length ==6) && (stre.length > 0) && (nam.length > 0) &&  (cit.length > 0) && (st.length > 0) && (cit.length > 0) && (mobi.length == 10)){
-    console.log("yes");
-    window.location.href="checkout.hbs";
+   
+    window.location.href="checkout/add";
 
 } else{
    let warni = document.getElementById("warn");
    warni.innerHTML = "Please fill required fields*"
 }
     }</script>
-
+ --}}

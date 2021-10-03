@@ -16,7 +16,7 @@ router.get("/",async(req,res)=>{
     product.forEach(data =>{
          total = total + data.price;
     })
-    console.log(total)
+  
   
 
 
@@ -27,22 +27,22 @@ router.get("/",async(req,res)=>{
 })
 
 
-router.post("/",async(req,res) => {
-    const add = await address.create(req.body);
+// router.post("/",async(req,res) => {
+//     const add = await address.create(req.body);
 
-    // return res.status(200);
+//     // return res.status(200);
 
-    // const address = await address({Name: req.body.name,pinecode:req.body.pinecode,Address:req.body.add,Landmark:req.body.Landmark,city:req.body.city,state:req.body.state,Mobile:req.body.mobile})
-    //  address.save(function(err) {
-    //     if(err){
-    //         console.log("Something went wrong");
-    //     }
-    //     else{
-    //         console.log("Successfully added a user");
-    //         res.redirect("/checkout.hbs");
-    //     }
-    //  });
-})
+//     // const address = await address({Name: req.body.name,pinecode:req.body.pinecode,Address:req.body.add,Landmark:req.body.Landmark,city:req.body.city,state:req.body.state,Mobile:req.body.mobile})
+//     //  address.save(function(err) {
+//     //     if(err){
+//     //         console.log("Something went wrong");
+//     //     }
+//     //     else{
+//     //         console.log("Successfully added a user");
+//     //         res.redirect("/checkout.hbs");
+//     //     }
+//     //  });
+// })
 
 
 
