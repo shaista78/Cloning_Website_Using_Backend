@@ -34,6 +34,8 @@
     display: none;
 }
 
+
+
 .myDIV:hover .hide {
     display: block;
     color: rgb(241, 234, 234);
