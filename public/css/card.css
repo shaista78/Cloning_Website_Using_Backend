@@ -5,20 +5,22 @@
            grid-gap: 1%;
            
         }
-  #data div {
+  /* #data div {
+           
+        } */
+
+        #myDIV{
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 70%;
-             box-shadow: 0 0 40px 20px rgba(223, 86, 170, 0.2);
-             margin-left: 320px;
-             border-radius: 15px;
-             height: 220px;
-             padding: 10px;
+            width: 50%;
         }
-        #data div img{
+        #another{
+            display: flex;
+        }
+
+        #data > div > img{
             width: 33%;
             height: 60%;
+           
         }
             .txt {
             height: 42px;
@@ -28,7 +30,7 @@
             letter-spacing: 0.5px;
             margin-top: 5px;
             line-height: 21px;
-            float: left;
+            /* float: left; */
             width: 85%;
         }
        
@@ -125,3 +127,14 @@ h3{
 .f{
     float: right;
 }
+
+
+/* display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+ box-shadow: 0 0 40px 20px rgba(223, 86, 170, 0.2);
+ margin-left: 320px;
+ border-radius: 15px;
+ height: 220px;
+ padding: 10px; */
