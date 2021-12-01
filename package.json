@@ -4,17 +4,33 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "mongoose": "^6.0.8",
-    "nodemon": "^2.0.13"
+    "netlify-lambda": "^2.0.15",
+    "nodemon": "^2.0.13",
+    "serverless-http": "^2.7.0"
   },
   "name": "final",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" : "nodemon server.js -e js, hbs"
+    "server": "nodemon server.js -e js, hbs",
+    "start": "node server.js",
+    "build": "./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "![New tab - Personal - Microsoft​ Edge 02-10-2021 12_15_23](https://user-images.githubusercontent.com/87421802/135706765-3bd3b680-fb72-497e-a4b2-8619bd026e3d.png)",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaista78/Cloning_Website_Using_Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shaista78/Cloning_Website_Using_Backend/issues"
+  },
+  "homepage": "https://github.com/shaista78/Cloning_Website_Using_Backend#readme"
 }
